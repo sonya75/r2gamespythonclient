@@ -1,0 +1,4010 @@
+package com.message;
+message C_USE_ACT_CODE{
+	required string code = 1;
+}
+message S_OPEN_CROSS_ARENA_BATTLE_LOG{
+}
+message C_RECEIVE_FRIEND_GFIT{
+	required int32 friendID = 1;
+}
+message S_SYN_CANCEL_MATCH_ATHLETICS{
+}
+message StarLifeInfoMsg{
+	required int32 heroID = 1;
+	required int32 sid = 2;
+	required int32 level = 3;
+}
+message S_SYN_BOSS_BUFF_LEVEL{
+	required int32 buffLevel = 1;
+}
+message S_SYN_LEAVE_ATHLETICS_SCENE{
+	required string guid = 1;
+}
+message C_GET_QUESTIONNAIRE_PROGRESS{
+}
+message S_BATCH_SELL_ITEM{
+	repeated PlayerBackpackMsg playerBackpack = 1;
+	required int32 addMoney = 2;
+}
+message C_COMPOSE_WING{
+	required int32 wingID = 1;
+}
+message C_INTERCEPT_ESCORT{
+	required int32 targetID = 1;
+}
+message FriendReqMsg{
+	required int32 requestID = 1;
+	required PlayerSimpleMsg info = 2;
+}
+message S_SYN_BUY_ENERGY{
+	required int32 buyEnergy = 1;
+}
+message C_CHOOSE_PAY{
+	required int32 payType = 1;
+}
+message PlayerHeroEquipMsg{
+	required int32 playerHeroEquipID = 1;
+	required int32 playerID = 2;
+	required int32 baseHeroID = 3;
+	required int32 phase = 4;
+	required int32 pos = 5;
+	required int32 baseEquipID = 6;
+	required int32 type = 7;
+}
+message S_GET_CROSS_ARENA_INFO{
+	required int32 myRank = 1;
+	required int64 battleTime = 2;
+	required int32 rewardRank = 3;
+	required int32 receiveReward = 4;
+	required int32 bestRank = 5;
+	required int32 hasNewLog = 6;
+	repeated PlayerCrossArenaMsg challengeList = 7;
+	repeated CrossArenaLogMsg battleLogList = 8;
+}
+message S_RECRUIT_HERO{
+	required PlayerHeroMsg playerHeroMsg = 1;
+}
+message S_INSPIRE_ATHLETICS_BATTLE{
+	required int32 type = 1;
+	required int32 value = 2;
+}
+message C_STRONG_HATCH{
+	required int32 playerHeroID = 1;
+	required int32 type = 2;
+	required int32 hatchID = 3;
+}
+message C_MULTI_INS_INVATE_NOTICE{
+}
+message S_RECEIVE_TOTAL_RECHARGE_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message C_REVIVE_GUILD_BOSS{
+}
+message C_RECIEVE_GROWTH_GIFT{
+	required int32 growthGiftID = 1;
+}
+message C_RECEIVE_ATTACHMENT_BY_IDS{
+	repeated int32 mailInboxIDs = 1;
+}
+message C_RECEIVE_CROSS_ARENA_REWARD{
+}
+message S_BUY_MONEY{
+	required int32 buyMoney = 1;
+}
+message C_SHOW_CROSS_PLAYER_INFO{
+	required string playerGuid = 1;
+}
+message C_ARENA_CHALLENGE{
+	required int32 defencePlayerID = 1;
+	required int32 defenceRank = 2;
+}
+message C_DELETE_MAIL_BY_IDS{
+	repeated int32 mailInboxIDs = 1;
+}
+message S_SYN_SOME_BODY_UPDATE_WING{
+	required int32 playerId = 1;
+	required int32 wingHatchID = 2;
+}
+message MultiInsMonsterMsg{
+	required int32 type = 1;
+	required int32 amount = 2;
+	required int32 kill = 3;
+}
+message PlayerOnlineRewardMsg{
+	required int32 onlineRewardID = 1;
+	required int32 onlineTime = 2;
+}
+message SynWingPropertyMsg{
+	required int32 playerWingID = 1;
+	required int32 battleValue = 2;
+	repeated WingPropertyInfoMsg propertyInfoMsg = 3;
+}
+message S_GET_GP_APP_INV_LIST_BY_GUILD_ID{
+	repeated GuildPlayerAppInvMsg guildPlayerAppList = 1;
+}
+message C_GET_GP_APP_INV_LIST_BY_GUILD_ID{
+	required int32 guildID = 1;
+}
+message S_GET_TRAIL_TYPE{
+	required int32 trailType = 1;
+}
+message S_SYN_BOSS_DMAGE_LIST{
+	repeated DmageRankMsg dmageMsg = 1;
+	required int32 myDmage = 2;
+	required int32 totalDmage = 3;
+	required int32 playerNum = 4;
+	required int32 remainLife = 5;
+	required int32 fighters = 6;
+}
+message C_GET_OPEN_INSTANCE_LIST{
+}
+message S_REVIVE_GUILD_BATTLE{
+}
+message C_OPEN_GOLD_VIP_REWARD_PANEL{
+}
+message S_RECEIVE_GOLD_VIP_LEVEL_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message C_EXIT_CITY{
+}
+message S_SYN_TIME_QUEUE{
+	required TimeQueueMsg timeQueueMsg = 1;
+}
+message PlayerWingMsg{
+	required int32 playerWingID = 1;
+	required int32 playerID = 2;
+	required int32 curPhase = 3;
+	required int32 curStar = 4;
+	required int32 curStarExp = 5;
+	required int32 rideWingID = 6;
+	repeated OwnerWingMsg ownerWings = 7;
+	required SynWingPropertyMsg propertyMsg = 8;
+}
+message C_START_ESCORT{
+}
+message S_OPEN_STAR_LIFE_GRID{
+	required int32 num = 1;
+}
+message C_REPLACE_ATTR{
+	required int32 playerEquipID = 1;
+}
+message C_QUIT_INSTANCE{
+}
+message C_END_BATTLE{
+	required int32 type = 1;
+}
+message S_SYN_REFUSE_TEAM_NOTICE{
+	required string playerName = 1;
+}
+message S_GET_GUILD_BY_PLAYER_ID{
+	required GuildMsg guild = 1;
+	repeated GuildPlayerMsg guildPlayerList = 2;
+}
+message C_RETREAT_BATTLE{
+}
+message S_SYN_NEW_FRIEND{
+	required FriendMsg friend = 1;
+}
+message SimpleTeamMemberMsg{
+	required string name = 1;
+	required int32 career = 2;
+	required int32 level = 3;
+	required int32 leadar = 4;
+}
+message C_ENTER_CITY{
+	required int32 cityID = 1;
+}
+message S_OPEN_WAREHOUSE_GRID{
+	required int32 warehouseSize = 1;
+}
+message S_SYN_OCCUPY_REWARD{
+	required RewardMsg reward = 1;
+}
+message C_TEST_ENDLESSTOWER{
+	required int32 curTower = 1;
+}
+message S_STAR_PLAYER_PET{
+	required int32 playerPetID = 1;
+	required int32 curStar = 2;
+}
+message S_DIG_DIAMOND_NOTICE{
+	required int32 lastTime = 1;
+}
+message S_GET_TOWER_RANK{
+	repeated TowerRankMsg rankList = 1;
+	required int32 rankNum = 2;
+	required int32 playerRank = 3;
+	required int32 towerID = 4;
+}
+message ModifySmallChestMsg{
+	required int32 smallChectInfoID = 1;
+	required int32 state = 2;
+}
+message DropDetailMsg{
+	required int32 id = 1;
+	required int32 type = 2;
+	required int32 num = 3;
+}
+message C_OPEN_STAR_LIFE_GRID{
+	required int32 num = 1;
+}
+message S_COMPLETE_ESCORT{
+	required RewardMsg rewards = 1;
+}
+message C_GET_ARENA_RANK_LIST{
+}
+message C_PUTON_EQUIPMENT{
+	required int32 playerEquipmentID = 1;
+	required int32 type = 2;
+}
+message C_USE_HERO_ITEM{
+	required int32 playerHeroID = 1;
+	required int32 itemID = 2;
+	required int32 itemNum = 3;
+}
+message S_SYN_NEW_FRIEND_REQUEST{
+	required FriendReqMsg request = 1;
+}
+message C_ANABASIS_CHOOSE{
+	required int32 level = 1;
+}
+message C_RESET_TRAIL{
+}
+message S_SYN_ATHLETICS_BATTLE_RESULT{
+	required int32 teamID = 1;
+	repeated AthleticsPlayerMsg playerMsg = 2;
+}
+message S_QUIT_ATHLETICS_TEAM{
+}
+message PlayerSimpleMsg{
+	required int32 playerID = 1;
+	required string name = 2;
+	required int32 career = 3;
+	required int32 level = 4;
+	required int32 vipLevel = 5;
+	required int32 battleValue = 6;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message C_TASTE_MOUNT{
+}
+message S_STAR_HERO{
+	required int32 playerHeroID = 1;
+	required int32 star = 2;
+	required int32 type = 3;
+}
+message C_GET_HERO_RANK{
+	required int32 page = 1;
+	required int32 type = 2;
+}
+message PlayerDialMsg{
+	required int32 playerId = 1;
+	required int32 score = 2;
+}
+message S_CREATE_FRIEND_GROUP{
+	required FriendGroupMsg group = 1;
+}
+message S_SYN_OTHER_ATHLETICS_END_BATTLE{
+	required string attackGuid = 1;
+	required string defenceGuid = 2;
+	required string winGuid = 3;
+}
+message S_RENEW_MONTH_CARD{
+	required int64 monthCardEndTime = 1;
+}
+message C_OPEN_TIME_QUEUE{
+	required int32 type = 1;
+}
+message S_SYN_INSPIRE_GUILD_BOSS{
+	repeated GuildInspireMsg inspires = 1;
+}
+message C_REMOVE_GUILD_PLAYER{
+	required int32 guildID = 1;
+	required int32 removedPlayerID = 2;
+}
+message S_JOIN_GUILD_NOTICE{
+	required int32 guildID = 1;
+	required string guildName = 2;
+}
+message C_GET_PLAYER_TITLE_LIST{
+}
+message S_INLAY_JEWEL{
+	repeated PlayerBackpackMsg backPackList = 1;
+	required PlayerEquipmentMsg playerEquipment = 2;
+	required int32 holeIndex = 3;
+}
+message S_GROUP_FRIEND{
+	required int32 status = 1;
+}
+message C_REVIVE_GUILD_BATTLE{
+}
+message C_GET_ENDLESS_TOWER_DATA{
+}
+message PlayerBadgeInfo{
+	required int32 stirps = 1;
+	required int32 phase = 2;
+	required int32 level = 3;
+}
+message C_TAKETO_BACKPACK{
+	required int32 playerWarehouseID = 1;
+}
+message TowerRankMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 towerID = 4;
+	required string playerGuid = 5;
+	required int32 career = 6;
+	required int32 battleValue = 7;
+	required int32 star = 8;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message PlayerEquipmentMsg{
+	required int32 playerEquipmentID = 1;
+	required int32 playerID = 2;
+	required int32 equipmentID = 3;
+	required int32 pos = 4;
+	required int32 phase = 5;
+	required int32 intensifyNum = 6;
+	required int32 washlevel1 = 7;
+	required int32 washlevel2 = 8;
+	required int32 washlevel3 = 9;
+	required int32 washlevel4 = 10;
+	required int32 state = 11;
+	required int32 holeNum = 12;
+	required int32 hole1ItemID = 13;
+	required int32 hole2ItemID = 14;
+	required int32 hole3ItemID = 15;
+	required int32 replaceWashLevel1 = 16;
+	required int32 replaceWashLevel2 = 17;
+	required int32 replaceWashLevel3 = 18;
+	required int32 replaceWashLevel4 = 19;
+}
+message PlayerGoddessInfo{
+	required int32 playerID = 1;
+	required int32 level = 2;
+	required int32 progress = 3;
+	required int32 interceptCount = 4;
+	required int32 refreshCount = 5;
+	required int32 status = 6;
+}
+message C_GET_PLAYER_WING{
+}
+message C_QQ_RECEIVE_REWARD_LEVEL{
+	required int32 rewardID = 1;
+}
+message S_QUIT_GUILD_BATTLE{
+}
+message C_RECEIVE_ONLINE_REWARD{
+	required int32 onlineRewardID = 1;
+}
+message C_ENTER_ATHLETICS_BATTLE{
+	required string guid = 1;
+}
+message S_ACTIVE_EQUIPMENT{
+	required PlayerEquipmentMsg playerEquipment = 1;
+	repeated PlayerBackpackMsg playerBackpack = 2;
+}
+message C_RECEIVE_VIP_DAILY_REWARD{
+}
+message C_BUY_MYSTICAL_SHOP_ITEM{
+	required int32 playerShopID = 1;
+}
+message C_ANABASIS_SWEEP{
+	required int32 level = 1;
+}
+message C_GET_BATTLE_VALUE_RANK{
+	required int32 page = 1;
+	required int32 type = 2;
+}
+message S_GET_PLAYER_HERO_LIST{
+	repeated PlayerHeroMsg playerHeroMsg = 1;
+	repeated PlayerHeroSkillMsg playerHeroSkillList = 2;
+	repeated PlayerHeroEquipMsg playerHeroEquipList = 3;
+	repeated PlayerFormationMsg playerFormationMsgList = 4;
+}
+message C_ATHLETICS_MEMBER_READY{
+}
+message C_OPEN_FORMATION{
+}
+message C_NPC_DIALOGUE_TASK{
+	required int32 npcID = 1;
+}
+message C_BUY_MONTH_CARD{
+	required int32 cardID = 1;
+}
+message S_BUY_OPEN_INVEST_ACT{
+}
+message S_SYN_PLAYER_DIAMOND{
+	required int32 diamond = 1;
+	required int32 amount = 2;
+	required int32 type = 3;
+}
+message S_LOGOUT{
+	required string msg = 1;
+}
+message S_SYN_MOUNT_PROPERTY{
+	required SynMountPropertyMsg mountPropertyMsg = 1;
+}
+message S_REVIVE_HERO{
+	required int32 reviveID = 1;
+	repeated PlayerBackpackMsg playerBackpack = 2;
+}
+message S_GET_OPEN_SERVICE_ACT_INFO{
+	repeated RankActInfo ranks = 1;
+}
+message C_EXIT_DIAL_ACT{
+}
+message S_SYN_HANDLE_BATTLE_REQUEST_NOTICE{
+	required int32 result = 1;
+}
+message C_GET_CROSS_ARENA_NPC{
+}
+message C_GET_SERVER_TIME{
+	required int64 clientTime = 1;
+}
+message C_STAR_ASTROLOGY{
+	required int32 type = 1;
+}
+message S_BREAK_PLAYER_BADGE{
+	required PlayerBadgeInfo badge = 1;
+	repeated PlayerBackpackMsg playerBackpackList = 2;
+}
+message S_DIG_DIAMOND_DIG{
+	required DigDiamondLogMsg msg = 1;
+}
+message S_GET_BATTLE_VALUE_RANK{
+	repeated BattleValueRankMsg rankList = 1;
+	required int32 rankNum = 2;
+	required int32 playerRank = 3;
+	required int32 playerBattleValue = 4;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message CrossArenaLogMsg{
+	required string attackGuid = 1;
+	required string attackName = 2;
+	required string defenceGuid = 3;
+	required string defenceName = 4;
+	required int32 attackRank = 5;
+	required int32 defenceRank = 6;
+	required int64 battleTime = 7;
+	required int32 result = 8;
+	required int32 attackRankChanged = 9;
+}
+message S_SOME_BODY_JOIN_INS_TEAM{
+	required TeamPlayerMsg tmpMsg = 1;
+}
+message S_QQ_GET_LEVEL_LOG{
+	required QQLevelMsg levelMsg = 1;
+}
+message S_GET_TRAIL_REMAIN{
+	required int32 strenghtTime = 1;
+	required int32 buyStrenght = 2;
+	required int32 magicTime = 3;
+	required int32 buyMagic = 4;
+	required int32 braveTime = 5;
+	required int32 buyBrave = 6;
+}
+message C_BUY_MC{
+}
+message C_PITCH_HERO{
+	required int32 playerHeroID = 1;
+	required int32 formationID = 2;
+	required int32 fromPos = 3;
+	required int32 toPos = 4;
+}
+message GuildPlayerMsg{
+	required int32 guildPlayerID = 1;
+	required int32 playerID = 2;
+	required int32 guildID = 3;
+	required int32 position = 4;
+	required int32 contribution = 5;
+	required int32 totalContribution = 6;
+	required int32 playerLevel = 7;
+	required string playerName = 8;
+	required int64 onlineTime = 9;
+	required int32 gender = 10;
+	required int32 career = 11;
+	required int32 battleValue = 12;
+	required string guildName = 13;
+	repeated GuildSkill skills = 14;
+	required int32 dailyDonate = 15;
+	required int32 dailyDonateTotal = 16;
+	required int32 dailyDonateDiamond = 17;
+	required int32 dailyDonateTotalDiamond = 18;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_HANDLE_FRIEND_REQUEST{
+	repeated int32 requestID = 1;
+	required bool action = 2;
+}
+message C_ONEKEY_INVATE_ATHLETICS_TEAM{
+}
+message S_DIG_DIAMOND_HELP{
+	required DigDiamondLogMsg msg = 1;
+}
+message S_SYN_PLAYER_TASK_TRACK{
+	required int32 playerTaskID = 1;
+	required int32 currentNum = 2;
+	required int32 submitState = 3;
+}
+message S_SYN_SOME_BODY_CHANGE_MOUNT{
+	required int32 playerId = 1;
+	required int32 mountID = 2;
+	required string guid = 3;
+}
+message C_OPEN_HERO_ACTIVITY_PANEL{
+}
+message C_ANABASIS_RANK{
+	required int32 page = 1;
+}
+message EndlessCompleteRecordMsg{
+	required int32 towerID = 1;
+	required int32 playerID = 2;
+	required string playerName = 3;
+	required int32 state = 4;
+}
+message ProExtInfoMsg{
+	required int32 propertyID = 1;
+	required string propertyInfo = 2;
+}
+message S_SYN_SOME_BODY_CHANGE_GUILD{
+	required string fighterID = 1;
+	required int32 guildID = 2;
+	required string guildName = 3;
+}
+message C_BREAK_MOUNT{
+	required int32 mountID = 1;
+}
+message S_HONOR_SHOP_EXCHANGE{
+	required int32 itemID = 1;
+	required int32 num = 2;
+	required int32 honor = 3;
+	repeated PlayerBackpackMsg pbList = 5;
+}
+message C_CHANGE_HERO_FOLLOW{
+	required int32 playerHeroID = 1;
+	required int32 type = 2;
+}
+message S_TRAIN_SWEEP{
+	required int32 result = 1;
+	required int32 level = 2;
+}
+message S_RECEIVE_CROSS_ARENA_REWARD{
+	required RewardMsg reward = 1;
+}
+message C_RECEIVE_MONTH_CARD{
+	required int32 cardID = 1;
+}
+message C_XUNBAO_EXCHANGE{
+	required int32 itemID = 1;
+	required int32 num = 2;
+}
+message S_ANABASIS_SWEEP_REWARD{
+	required int32 currentLevel = 1;
+	required int32 currentProgress = 2;
+	required RewardMsg rewards = 3;
+}
+message S_GET_ANABASIS_INFO{
+	required int32 currentLevel = 1;
+	required int32 currentProgress = 2;
+	required int32 maxLevel = 3;
+	repeated FightStatus fights = 4;
+	required int32 sweepLevel = 5;
+	required int32 maxProgress = 6;
+}
+message C_RECEIVE_ENERGY{
+}
+message C_UPDATE_GUILD_PLAYER_POSITION{
+	required int32 guildID = 1;
+	required int32 targetID = 2;
+	required int32 position = 3;
+}
+message C_QQ_RECEIVE_REWARD_FRESH{
+}
+message S_SYN_SOME_BODY_CHANGE_FOLLOW{
+	required int32 playerId = 1;
+	required SceneFighterMsg heroFighterMsg = 2;
+}
+message LuckyTreasuryLogMsg{
+	required string playerName = 1;
+	required int32 itemID = 2;
+	required int32 num = 3;
+	required int32 playerID = 4;
+	required int32 itemType = 5;
+}
+message C_CHANGE_PLAYER_NAME{
+	required string newPlayerName = 1;
+}
+message PlayerRankMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 level = 4;
+	required int32 exp = 5;
+	required int32 career = 6;
+	required string playerGuid = 7;
+	required int32 star = 8;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message C_GET_ONLINE_LOG_LIST{
+}
+message C_FINISH_ALL_DAILY_TASK{
+}
+message S_GET_OPEN_INSTANCE_LIST{
+	repeated PlayerInstanceLogMsg pilMsgList = 1;
+	repeated int32 rewardIds = 2;
+}
+message S_REFRESH_SMALL_CHEST{
+	repeated SmallChestMsg smallChestMsg = 1;
+}
+message S_BATTLE_RESULT{
+	required BattleResultMsg resultMsg = 1;
+}
+message C_REFRESH_MYSTICAL_SHOP{
+}
+message S_CREATE_GUILD{
+	required GuildMsg guild = 1;
+	repeated GuildPlayerMsg guildPlayerList = 2;
+}
+message C_REMOVE_ATHLETICS_MEMBER{
+	required string guid = 1;
+}
+message S_BUY_CROSS_ARENA_NUM{
+	required int32 success = 1;
+}
+message C_UPGRADE_GUILD_SKILL{
+	required int32 type = 1;
+}
+message C_GET_GUILD_BY_PLAYER_ID{
+}
+message C_BREAK_WING{
+	required int32 wingID = 1;
+}
+message C_ENTER_INSTANCE_HALL{
+	required int32 instanceID = 1;
+}
+message SkillBuffMsg{
+	required string fighterID = 1;
+	required string targetID = 2;
+	required int32 baseSkillID = 3;
+	required int32 buffID = 4;
+	required int32 round = 5;
+	required int32 hp = 6;
+	required int32 buffNum = 7;
+	required int32 value = 8;
+	required int32 buffLevel = 9;
+}
+message S_UPDATE_GUILD_PLAYER_POSITION{
+	required int32 targetID = 1;
+	required int32 position = 2;
+}
+message C_GUIDE_CHARIMAN_CHANGE{
+	required int32 targetPlayerId = 1;
+}
+message C_PRO_PRIVATE_CHAT{
+	required int32 playerID = 1;
+}
+message PlayerCommonMsg{
+	required int32 playerID = 1;
+	required string name = 2;
+	required int32 exp = 3;
+	required int32 money = 4;
+	required int32 mc = 5;
+	required int32 career = 6;
+	required int32 diamond = 7;
+	required string playerGuid = 9;
+	required int32 anger = 10;
+	required int32 level = 11;
+	required int32 energy = 12;
+	required int32 energyMax = 13;
+	required int32 honor = 15;
+	required int32 vipLevel = 16;
+	required string vipLevelReward = 17;
+	required int32 totalVipExp = 18;
+	required int32 formationID = 19;
+	required int32 fresh = 20;
+	required int32 menuAuthority = 21;
+	required int32 xunbaoScore = 22;
+	required int32 phase = 23;
+	required int32 star = 24;
+	required int32 tasteMountFlag = 25;
+	required int32 wingHatchID = 26;
+	required int32 petHatchID = 27;
+	required int32 titleID = 28;
+	required int32 agentGift = 29;
+	required int32 boxGift = 30;
+	required int32 totalPayDiamond = 31;
+	required int32 cellphoneGift = 32;
+	required int32 goldVipLevel = 33;
+	required int32 goldVipYear = 34;
+	required int32 worship = 35;
+	required int32 stardust = 36;
+	required string previewRewards = 37;
+	required int32 starWingID = 38;
+}
+message S_SYN_INVITE_JOIN_TEAM{
+	required TeamPlayerMsg player = 1;
+	required int32 teamID = 2;
+	required int32 instanceID = 3;
+}
+message C_APPLY_JOIN_GUILD{
+	required int32 guildID = 1;
+}
+message S_RECEIVE_BETA_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message S_SYN_UPDATE_GUILD_CONTRIBUTION{
+	required int32 contribution = 1;
+	required int32 totalContribution = 2;
+}
+message S_STRENGTHEN_STAR_LIFE{
+	required StarLifeMsg starlife = 1;
+	required int32 stardust = 2;
+}
+message S_REFRESH_ARENA_INFO{
+	repeated PlayerArenaMsg challengeList = 1;
+}
+message S_OPEN_GOLD_VIP_REWARD_PANEL{
+	repeated int32 goldLevelRewardID = 1;
+	required int32 goldExtraRewardID = 2;
+}
+message S_BUY_TRAIL_COUNT{
+	required int32 instanceTpye = 1;
+	required int32 result = 2;
+}
+message S_PULL_DOWN_JEWEL{
+	repeated PlayerBackpackMsg backPackList = 1;
+	required PlayerEquipmentMsg playerEquipment = 2;
+}
+message C_GET_PLAYER_MOUNT{
+}
+message S_SYN_LOGIN_TEAM_INFO{
+	required TeamMsg team = 1;
+}
+message C_PULL_DOWN_JEWEL{
+	required int32 playerEquipmentID = 1;
+	required int32 holeIndex = 2;
+}
+message C_RECEIVE_FIRST_PAY{
+}
+message S_SYN_GUILD_BATTLE_DEATH{
+	required int64 time = 1;
+	required int32 deathCount = 2;
+}
+message BattleResultMsg{
+	required int32 costTime = 1;
+	required int32 round = 2;
+	required int32 deadCount = 3;
+	required int32 valuation = 4;
+	required int32 battleType = 5;
+	required int32 isWin = 6;
+	repeated DropDetailMsg detailList = 7;
+	required int32 insType = 9;
+}
+message S_UPGRADE_GUILD{
+	required int64 guildWealth = 1;
+	required int32 level = 2;
+	required int32 populationMax = 3;
+}
+message C_XUNLEI_GET_GOLD_VIP_INFO{
+}
+message AnabasisRank{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 level = 3;
+	required int32 career = 4;
+	required int32 maxLevel = 5;
+	required int32 progress = 6;
+	required int32 rank = 7;
+}
+message C_PUTDOWN_EQUIPMENT{
+	required int32 playerEquipmentID = 1;
+	required int32 type = 2;
+}
+message DetailBattleGuide{
+	required int32 id = 1;
+	repeated BattleGuideInfo infos = 2;
+}
+message S_SYN_ROB_MINE{
+	required int32 robCount = 1;
+	required RewardMsg reward = 2;
+}
+message PlayerWarehouseMsg{
+	required int32 playerWarehouseID = 1;
+	required int32 playerID = 2;
+	required int32 itemID = 3;
+	required int32 type = 4;
+	required int32 isOverlap = 5;
+	required int32 category = 6;
+	required int32 itemIndex = 7;
+	required int32 num = 8;
+	required int32 isBinding = 9;
+}
+message C_DIG_DIAMOND_GET_INFO{
+}
+message S_EXCEPTION_MSG{
+	required int32 code = 1;
+}
+message DigDiamondLogMsg{
+	required int32 playerId = 1;
+	required int32 uid = 2;
+	required int32 helpNum = 3;
+	required int32 lastTime = 4;
+	required int32 createTime = 5;
+	required int32 state = 6;
+	repeated PlayerFacadeMsg playerFacade = 7;
+	required int32 times = 8;
+}
+message TitleInfo{
+	required int32 playerID = 1;
+	required int32 titleID = 2;
+	required int64 expire = 3;
+	required int32 status = 4;
+}
+message C_SET_AUTO_AGREE{
+	required int32 autoAgree = 1;
+}
+message S_CREATE_PLAYER_PET{
+	required PlayerPetMsg playerPetMsg = 1;
+}
+message SmallChestMsg{
+	required int32 smallChectInfoID = 1;
+	required int32 state = 2;
+	required int32 posX = 3;
+	required int32 posY = 4;
+}
+message S_SYN_ATHLETICS_MEMBER_READY{
+	required string guid = 1;
+}
+message C_GET_ATHLETICS_TEAM_INFO{
+	required int32 page = 1;
+}
+message S_CREATE_BUILDING{
+	repeated BuildingMsg buildingMsg = 1;
+}
+message C_RECEIVE_ACTIVE_COMPLETE{
+	required int32 activeID = 1;
+}
+message C_SHOW_PLAYER{
+	required int32 playerID = 1;
+	required int32 showType = 2;
+	required string playerGuid = 3;
+}
+message PlayerMysticalShopMsg{
+	required int32 playerShopID = 1;
+	required int32 shopID = 2;
+	required int32 state = 3;
+	required int32 value = 4;
+	required int32 getNum = 5;
+	required int32 border = 6;
+	required int32 discount = 7;
+}
+message C_ENTER_GUILD_BATTLE{
+}
+message C_JOIN_MULTI_TEAM{
+	required int32 teamID = 1;
+	required int32 instanceID = 2;
+}
+message C_RECEIVE_LEVEL_REWARD{
+	required int32 levelRewardID = 1;
+}
+message S_SYN_ENTER_ATHLETICS_SCENE{
+	required SceneFighterMsg fighters = 1;
+}
+message C_REMOVE_FRIEND_GROUP{
+	required int32 groupID = 1;
+}
+message C_BREAK_PLAYER_BADGE{
+	required int32 stirps = 1;
+}
+message PlayerDialLogMsg{
+	required string guid = 1;
+	required string name = 2;
+	required int32 rewardID = 3;
+	required int32 num = 4;
+	required int32 time = 5;
+}
+message IndexItemMsg{
+	required int32 itemIndexID = 1;
+	required PlayerBackpackMsg playerBackpack = 2;
+}
+message C_REFUSE_ALL_APPLY{
+}
+message StarLifeMsg{
+	required int32 id = 1;
+	required int32 playerID = 2;
+	required int32 heroID = 3;
+	required int32 sid = 4;
+	required int32 level = 5;
+	required int32 state = 6;
+	required int32 pos = 7;
+}
+message PlayerMountMsg{
+	required int32 playerMountID = 1;
+	required int32 playerID = 2;
+	required int32 curPhase = 3;
+	required int32 curStar = 4;
+	required int32 curStarExp = 5;
+	required int32 rideMountID = 6;
+	repeated OwnerMountMsg ownerMounts = 7;
+	required SynMountPropertyMsg propertyMsg = 8;
+	required int32 lastMountID = 9;
+}
+message C_AGREE_ALL_APPLY{
+}
+message S_GET_GUILD_BATTLE_SIGN_UP_RANK{
+	repeated GuildBattleGuildMsg ranks = 1;
+	required int32 totalPage = 2;
+	required int32 myRank = 3;
+}
+message S_RECEIVE_FRIEND_GFIT{
+	required int32 status = 1;
+}
+message C_CITY_CHANGE_LINE{
+	required int32 branch = 1;
+}
+message S_ENTER_ATHLETICS_SCENE{
+	repeated SceneFighterMsg fighters = 1;
+	repeated AthleticsInspireMsg inspires = 2;
+	required AthleticsPlayerMsg playerMsg = 3;
+	required int32 endTime = 4;
+}
+message S_QUIT_ATHLETICS_SCENE{
+}
+message C_TEST_PHASE_HERO{
+	required int32 heroID = 1;
+}
+message S_GET_DIAL_INFO{
+	required PlayerDialMsg info = 1;
+	required int32 pool = 2;
+	repeated PlayerDialLogMsg myLogs = 3;
+	repeated PlayerDialLogMsg globalLogs = 4;
+	repeated PlayerDialExchangeMsg items = 5;
+}
+message C_ANABASIS_SWEEP_REWARD{
+}
+message S_GUIDE_CHARIMAN_CHANGE{
+	required int32 playerId = 1;
+	required string playerName = 2;
+}
+message S_SYN_MULTI_INS_RANK{
+	repeated MultiInsMonsterMsg monsters = 1;
+	repeated MultiInsRankMsg ranks = 2;
+}
+message ChallengeLogMsg{
+	required int32 attackID = 1;
+	required string attackName = 2;
+	required int32 defenceID = 3;
+	required string defenceName = 4;
+	required int32 result = 5;
+	required int32 attackRankChanged = 6;
+	required int32 attackRank = 7;
+	required int32 defenceRank = 8;
+	required int64 battleTime = 9;
+}
+message C_RECEIVE_COMPLETE_RECORD{
+	required int32 towerID = 1;
+}
+message C_REQUEST_BATTLE{
+	required int32 targetID = 1;
+}
+message BattleValueRankMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 level = 4;
+	required int32 battleValue = 5;
+	required int32 career = 6;
+	required string playerGuid = 7;
+	required int32 star = 8;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message C_REFRESH_ARENA_INFO{
+}
+message S_BUY_STAR_LIFE{
+	required StarLifeMsg starlife = 1;
+	required int32 itemID = 2;
+}
+message C_GET_PLAYER_MYSTICAL_SHOP_LIST{
+}
+message S_GET_QUESTIONNAIRE_PROGRESS{
+	required int32 questionProgress = 1;
+}
+message S_USE_HERO_ABILITY{
+	required int32 playerHeroID = 1;
+	required int32 abilityLevel = 2;
+	required int32 ability = 3;
+	required int32 temple = 4;
+}
+message S_GET_SERVER_TIME{
+	required int64 serverTime = 1;
+}
+message S_CROSS_ARENA_CHALLENGE{
+	required int32 arenaNum = 1;
+}
+message S_EVOLVE_MOUNT{
+	required OwnerMountMsg ownerMount = 1;
+}
+message SceneFighterMsg{
+	required int32 posX = 1;
+	required int32 posY = 2;
+	required string name = 3;
+	required int32 career = 4;
+	required int32 level = 5;
+	required int32 objectID = 6;
+	required int32 style = 7;
+	required string fighterID = 8;
+	required int32 mountID = 9;
+	required string ownerID = 10;
+	required int32 petHatchID = 11;
+	required int32 wingHatchID = 12;
+	required int32 battleValue = 13;
+	required int32 vipLevel = 14;
+	required int32 star = 15;
+	required int32 phase = 16;
+	required PlayerEscortInfo escort = 17;
+	required int32 guildID = 18;
+	required string guildName = 19;
+	required int32 titleID = 20;
+	required int32 worship = 21;
+	required string guildGuid = 22;
+	required int32 battleID = 23;
+	required int64 gbRevive = 24;
+	required int32 teamID = 25;
+	required int32 deathTime = 26;
+	required string agent = 27;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message C_CREATE_PLAYER_PET{
+	required int32 basePetID = 1;
+}
+message C_EXIT_MINE_INFO{
+}
+message C_GET_ROOM_LIST{
+	required int32 instanceID = 1;
+}
+message S_GET_ENDLESS_TOWER_DATA{
+	required int32 curTowerID = 1;
+	required int32 curSweepCount = 2;
+	required int32 maxSweepCount = 3;
+	required int32 buyTowerCount = 4;
+	required int32 finishTime = 5;
+	required int32 completeTower = 6;
+	repeated EndlessCompleteRecordMsg recordMsg = 7;
+}
+message S_GET_GUILD_BATTLE_VS{
+	repeated GuildBattleGuildMsg guilds = 1;
+	required bool sign = 2;
+}
+message AthleticsInspireMsg{
+	required int32 type = 1;
+	required int32 value = 2;
+}
+message C_GET_ELEMENT_DATA{
+}
+message PosInfoMsg{
+	required int32 posID = 1;
+	required int32 posType = 2;
+	required int32 posValue = 3;
+}
+message S_REMOVE_GUILD_PLAYER_NOTICE{
+	required int32 guildID = 1;
+}
+message C_FINISH_ONE_DAILY_TASK{
+	required int32 taskID = 1;
+}
+message S_SYN_STARDUST{
+	required int32 stardust = 1;
+}
+message C_RECEIVE_VIP_LEVEL_REWARD{
+	required int32 level = 1;
+}
+message PetRankMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 battleValue = 4;
+	required int32 petNum = 5;
+	required int32 buildingLevel = 6;
+	required string playerGuid = 7;
+	required int32 star = 8;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_GET_RACE_INFO{
+	required int32 peopleProgress = 1;
+	required int32 fairyProgress = 2;
+	required int32 beastProgress = 3;
+	required int32 ghostProgress = 4;
+	required int32 sweepProgress = 5;
+	required int32 raceNum = 6;
+	required int32 buyRaceNum = 7;
+}
+message S_PITCH_HERO{
+	required int32 formationID = 1;
+	repeated PosInfoMsg posInfoMsg = 2;
+}
+message WingPropertyInfoMsg{
+	required int32 propertyID = 1;
+	required int32 propertyValue = 2;
+}
+message C_BUY_ELEMENT_COUNT{
+}
+message C_SUBMIT_TASK{
+	required int32 taskID = 1;
+}
+message S_PRO_PRIVATE_CHAT{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 level = 3;
+	required int32 headImg = 4;
+}
+message PlayerDialExchangeMsg{
+	required int32 itemId = 1;
+	required int32 count = 2;
+}
+message LoginMsg{
+	repeated BuildingMsg buildingMsg = 1;
+	required PlayerCommonMsg playerCommonMsg = 2;
+	required SynPlayerPropertyMsg playerPropertyMsg = 3;
+	required int32 instanceID = 4;
+	required int32 severNo = 5;
+	required int64 serverTime = 6;
+	required int32 indulgenceSwitch = 7;
+	required int32 gameStep = 8;
+	required int32 guildID = 9;
+	required string guildName = 10;
+	required int32 cityID = 11;
+	required string guildGuid = 12;
+	required bool signGB = 13;
+	required int32 guildPosition = 14;
+	required int64 openServerTime = 15;
+	required int64 mergeServerTime = 16;
+	required int32 timeZone = 17;
+}
+message S_OPEN_FORMATION{
+	required int32 result = 1;
+}
+message C_GET_PLAYER_SCIENCE_LIST{
+}
+message S_BUY_MONTH_CARD{
+	required int32 cardID = 1;
+	required int64 monthCardEndTime = 2;
+}
+message C_ACTIVE_EQUIPMENT{
+	required int32 equipmentID = 1;
+}
+message C_CANCEL_MATCH_ATHLETICS{
+}
+message OwnerWingMsg{
+	required int32 wingID = 1;
+	required int32 wingLevel = 2;
+	required int32 breakLevel = 3;
+	repeated int32 equipIds = 4;
+}
+message C_ENTER_HERO_TRAIL{
+	required int32 instanceID = 1;
+}
+message MailInboxMsg{
+	required int32 mailInboxID = 1;
+	required string senderName = 2;
+	required int32 receiverID = 3;
+	required string theme = 4;
+	required string content = 5;
+	required int32 haveAttachment = 6;
+	required int32 haveReceiveAttachment = 7;
+	required string attachment = 8;
+	required int32 state = 9;
+	required int64 receiveTime = 10;
+	required int32 remainDays = 11;
+}
+message S_SYN_OPEN_SERVICE_RANK_BATTLE_VALUE{
+	repeated BattleValueRankMsg ranks = 1;
+}
+message S_RECEIVE_SEVEN_DAYS_LOGIN_GIFT{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message S_LOGIN_FRIEND_LIST{
+	repeated FriendMsg friends = 1;
+	repeated FriendReqMsg requests = 2;
+	repeated FriendGroupMsg groups = 3;
+	required int32 status = 4;
+	required string autoReply = 5;
+	required string personalSign = 6;
+}
+message C_HANDLE_FRIEND_REQUEST{
+	repeated int32 requestID = 1;
+	required bool action = 2;
+}
+message S_OCCUPY_MINE{
+	required int32 result = 1;
+}
+message C_OPEN_CROSS_ARENA_BATTLE_LOG{
+}
+message C_INSPIRE_GUILD_BOSS{
+	required int32 type = 1;
+}
+message MultiInsRewardMsg{
+	required TeamPlayerMsg player = 1;
+	required int32 rate = 2;
+	required int32 score = 3;
+	repeated DropDetailMsg reward = 4;
+}
+message C_DRAW_SMALL_CHEST{
+	required int32 smallChectInfoID = 1;
+}
+message C_RECEIVE_LUCKY_TREASURY_REWARD{
+	required int32 rewardID = 1;
+}
+message C_READ_INBOX_MAIL{
+	required int32 mailInboxID = 1;
+}
+message C_SPEED_TIME_QUEUE{
+	required int32 timeQueueID = 1;
+}
+message C_HANDLE_BATTLE_REQUEST{
+	required int32 requestID = 1;
+	required int32 action = 2;
+}
+message S_BUY_ANABASIS_RESET{
+	required int32 buyAnabasis = 4;
+}
+message C_EDIT_FRIEND_GROUP{
+	required int32 groupID = 1;
+	required string name = 2;
+}
+message PlayerArenaMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 battleValue = 4;
+	required int32 career = 5;
+	required int32 dressStyle = 6;
+	required string guildName = 7;
+	required string fashionStyle = 8;
+	required int32 level = 9;
+	required int32 star = 10;
+}
+message C_SEND_FRIEND_GFIT{
+	required int32 friendID = 1;
+}
+message PlayerGoldVipMsg{
+	required int32 goldVip = 1;
+	required int32 goldVipLevel = 2;
+	required int32 goldVipYear = 3;
+}
+message S_DIAL_EXCHANGE{
+	required PlayerDialExchangeMsg item = 1;
+	required RewardMsg reward = 2;
+	required int32 score = 3;
+}
+message C_REQUEST_FRIEND{
+	repeated int32 ids = 1;
+	required string name = 2;
+}
+message C_DIG_DIAMOND_SUBMIT{
+}
+message S_SYN_LAST_MOUNT{
+	required int32 lastMountID = 1;
+}
+message S_GUILD_DONATE{
+	required int64 guildWealth = 1;
+	required int32 dailyDonate = 2;
+	required int32 contribution = 3;
+	required int32 totalContribution = 4;
+	required int32 donateValue = 5;
+	required int32 type = 6;
+	required int32 dailyDonateDiamond = 7;
+}
+message C_OPEN_THANKS_ACTIVITY_PANEL{
+	required int32 type = 1;
+}
+message GuildRankMsg{
+	required int32 guildID = 1;
+	required string guildName = 2;
+	required int32 rank = 3;
+	required int32 level = 4;
+	required int32 playerID = 5;
+	required string playerName = 6;
+	required string playerGuid = 7;
+	required int64 battleValue = 8;
+	required int32 star = 9;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_GET_GODDESS_INFO{
+	required PlayerGoddessInfo info = 1;
+}
+message C_BUY_CROSS_ARENA_NUM{
+}
+message S_RESOLVE_STAR_LIFE{
+	repeated int32 id = 1;
+	required int32 heroID = 2;
+	required int32 stardust = 3;
+}
+message S_ANABASIS_CHOOSE{
+	required int32 currentLevel = 1;
+}
+message SynPlayerPropertyMsg{
+	required int32 dressStyle = 1;
+	required int32 battleValue = 2;
+	required int32 totalBattleValue = 3;
+	repeated PropertyInfoMsg propertyInfoMsg = 4;
+}
+message S_SYN_BOSS_OVER{
+	required int32 myRank = 1;
+	required int32 myDmage = 2;
+	required int32 getMoney = 3;
+	required int32 getHonor = 4;
+}
+message S_SYN_PLAYER_EXP{
+	required int32 exp = 1;
+	required int32 level = 2;
+	repeated int32 amount = 3;
+}
+message C_DISAGREE_JOIN{
+	required int32 applyPlayerID = 1;
+}
+message S_SPEED_TIME_QUEUE{
+	required int32 timeQueueID = 1;
+	required int32 type = 2;
+}
+message S_WASH_EQUIPMENT_ATTR{
+	required int32 washLevel1 = 1;
+	required int32 washLevel2 = 2;
+	required int32 washLevel3 = 3;
+	required int32 washLevel4 = 4;
+	repeated PlayerBackpackMsg backPackList = 5;
+	required int32 playerEquipID = 6;
+}
+message S_SYN_GUILD_BATTLE_RESULT{
+	required bool result = 1;
+	required int32 rank = 2;
+	required int32 level = 3;
+}
+message ExchangeLogMsg{
+	required int32 itemID = 1;
+	required int32 num = 2;
+	required int32 type = 3;
+}
+message S_LOGIN_COMPLETE{
+	required SynPlayerDailyDataMsg playerDailyData = 1;
+	repeated PlayerTaskMsg playerTaskList = 2;
+	required int32 haveNewMail = 6;
+	required PlayerSignMsg playerSign = 7;
+	required int64 exitTime = 8;
+	required int64 receiveEnergyTime = 9;
+	required int32 openMonthCard1 = 10;
+	required int32 openMonthCard2 = 11;
+	required int64 monthCardEndTime = 12;
+	required int32 firstPay = 13;
+	required int32 firstPayReward = 14;
+	required int32 buildQueue = 15;
+	required int32 testSwitch = 16;
+	repeated int32 acceptableTaskList = 17;
+	required int32 questionProgress = 18;
+	required int32 indulgence = 100;
+	required int32 indulgenceTime = 101;
+	required string appID = 201;
+}
+message C_UPDATE_GUILD_NOTICE{
+	required int32 guildID = 1;
+	required string guildNotice = 2;
+}
+message C_RECEIVE_INBOX_ATTACHMENT{
+	required int32 mailInboxID = 1;
+}
+message MultiInsRankMsg{
+	required string playerID = 1;
+	required int32 score = 2;
+	required int32 status = 3;
+}
+message C_GET_RACE_RANK{
+	required int32 raceType = 1;
+	required int32 page = 2;
+}
+message C_CANCEL_APPLY{
+	required int32 guildID = 1;
+}
+message SkillEffectMsg{
+	required string targetFighterID = 1;
+	required int32 dmg = 2;
+	required int32 hp = 3;
+	required int32 atkType = 4;
+	required float supRed = 5;
+	required int32 skillID = 6;
+}
+message GuildBattleRankMsg{
+	required string guid = 1;
+	required string name = 2;
+	required int32 kill = 3;
+	required int32 death = 4;
+	required int32 rank = 5;
+	required string guild = 6;
+}
+message C_CROSS_ARENA_CHALLENGE{
+	required string defenceGuid = 1;
+}
+message PlayerFormationMsg{
+	required int32 formationID = 1;
+	repeated PosInfoMsg posInfoMsg = 2;
+	required int32 firstUse = 3;
+}
+message S_GET_ARENA_RANK_LIST{
+	repeated ArenaHeroMsg arenaRankList = 1;
+}
+message C_RECEIVE_VALUE_PACKAGE_REWARD{
+	required int32 rewardID = 1;
+}
+message S_SYN_PLAYER_WEALTH_EXT{
+	required int32 todayPayDiamond = 1;
+	required int32 totalPayDiamond = 2;
+	required int32 totalVipExp = 3;
+	required int32 maxPayDiamond = 4;
+}
+message PropertyInfoMsg{
+	required int32 propertyID = 1;
+	required int32 propertyValue = 2;
+}
+message C_PHASE_MOUNT{
+}
+message S_SYN_END_GUILD_BATTLE{
+}
+message PlayerTaskMsg{
+	required int32 playerTaskID = 1;
+	required int32 taskID = 2;
+	required int32 type = 3;
+	required int32 targetType = 4;
+	required int32 currentNum = 5;
+	required int32 submitState = 6;
+	required int32 star = 7;
+	required string rewardInfo = 8;
+}
+message HeroActivityMsg{
+	required int32 activityId = 1;
+	required int32 diamond = 2;
+	required int32 receiveNum = 3;
+}
+message C_GET_PLAYER_SHOP_ITEM_DATA{
+}
+message S_SYN_REVIVE_GUILD_BATTLE{
+	required string fid = 1;
+	required int32 posX = 2;
+	required int32 posY = 3;
+	required int64 protectTime = 4;
+}
+message C_RECEIVE_GOLD_VIP_LEVEL_REWARD{
+	required int32 rewardID = 1;
+}
+message S_SYN_OPEN_SERVICE_RANK_CONSUME{
+	repeated OpenCommonRankMsg ranks = 1;
+}
+message PetPropertyInfoMsg{
+	required int32 propertyID = 1;
+	required int32 propertyValue = 2;
+}
+message C_GET_GODDESS_INFO{
+}
+message C_STAR_HERO{
+	required int32 playerHeroID = 1;
+	required int32 type = 2;
+}
+message PlayerDailyActiveMsg{
+	required int32 activeValue = 1;
+	required string activeReward = 2;
+	repeated ActiveMsg activeMsg = 3;
+}
+message C_RECEIVE_HERO_ACTIVITY_REWARD{
+	required int32 activityId = 1;
+}
+message S_GET_STAR_ASTROLOGY{
+	repeated int32 level = 1;
+}
+message C_SYN_POSITION{
+	required int32 posX = 1;
+	required int32 posY = 2;
+}
+message S_SYN_OPEN_SERVICE_RANK_CHARGE{
+	repeated OpenCommonRankMsg ranks = 1;
+}
+message C_UPGRADE_PLAYER_HERO_SKILL{
+	required int32 playerHeroID = 1;
+	required int32 playerHeroSkillID = 2;
+}
+message C_GET_GUIDE_APP_LIST{
+}
+message C_COMPOSE_MOUNT{
+	required int32 mountID = 1;
+}
+message S_SYN_ATHLETICS_CHANGE_LEADER{
+	required string guid = 1;
+}
+message S_SYN_GUILD_BATTLE_RANK{
+	repeated GuildBattleRankMsg ranks = 1;
+	required int32 atkScore = 2;
+	required int32 defScore = 3;
+	required int32 atkNum = 4;
+	required int32 defNum = 5;
+	required int32 atkDeath = 6;
+	required int32 defDeath = 7;
+}
+message S_RECEIVE_SINGLE_RECHARGE_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message S_SELL_BACKPACK_ITEM{
+	required PlayerBackpackMsg playerBackpack = 1;
+	required int32 addMoney = 2;
+}
+message C_VERIFY_SUCCESS_REQDATA{
+}
+message C_RECOMMEND_FRIENDS{
+}
+message S_OPEN_BACKPACK_GRID{
+	required int32 backpackSize = 1;
+}
+message C_PLAYER_IS_WORSHIP{
+	required string guid = 1;
+}
+message IndexWarehouseMsg{
+	required int32 itemIndexID = 1;
+	required PlayerWarehouseMsg playerWarehouse = 2;
+}
+message S_ACTIVE_EQUIPMENT_ATTR{
+	required PlayerEquipmentMsg playerEquipment = 1;
+	repeated PlayerBackpackMsg backPackList = 2;
+}
+message S_SYN_TIME_QUEUE_LOGIN{
+	repeated TimeQueueMsg timeQueueMsg = 1;
+}
+message S_GET_HERO_RANK{
+	repeated HeroRankMsg rankList = 1;
+	required int32 rankNum = 2;
+	required int32 playerRank = 3;
+	required int32 battleValue = 4;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_SYN_SOME_BODY_START_ESCORT{
+	required PlayerEscortInfo info = 1;
+}
+message TimeQueueMsg{
+	required int32 timeQueueID = 1;
+	required int32 type = 2;
+	required int64 finishTime = 3;
+	required int32 status = 4;
+}
+message C_AGREE_JOIN{
+	required int32 applyPlayerID = 1;
+}
+message OwnerMountMsg{
+	required int32 mountID = 1;
+	required int32 mountLevel = 2;
+	required int32 breakLevel = 3;
+	repeated int32 equipIds = 4;
+}
+message S_OPEN_ARENA_BATTLE_LOG{
+}
+message C_BUY_ITEM{
+	required int32 itemID = 1;
+	required int32 num = 2;
+}
+message C_BUY_SWEEP_TOWER{
+}
+message DmageRankMsg{
+	required int32 rank = 1;
+	required string name = 2;
+	required int32 dmage = 3;
+	required int32 career = 4;
+}
+message C_UPGRADE_PLAYER_BADGE{
+	required int32 stirps = 1;
+}
+message S_INSPIRE_GUILD_BOSS{
+	repeated PlayerBackpackMsg playerBackpack = 1;
+}
+message S_CHANGE_HERO_FOLLOW{
+	required int32 playerHeroID = 1;
+	required int32 followFlag = 2;
+}
+message S_ANABASIS_BATTLE{
+}
+message S_GET_GUILD_RANK{
+	repeated GuildRankMsg rankList = 1;
+	required int32 rankNum = 2;
+	required int32 playerRank = 3;
+	required string guildName = 4;
+}
+message C_GET_PLAYER_HERO_LIST{
+}
+message C_SELL_BACKPACK_ITEM{
+	required int32 playerBackpackID = 1;
+}
+message C_GET_STAR_ASTROLOGY{
+}
+message S_SWEEP_ENDLESS_TOWER{
+	required int32 type = 1;
+	required int32 finishTime = 2;
+}
+message S_RECEIVE_THANKS_ACTIVITY_REWARD{
+	required int32 activityId = 1;
+	required RewardMsg reward = 2;
+}
+message TeamPlayerMsg{
+	required string guid = 1;
+	required string playerName = 2;
+	required int32 level = 3;
+	required int32 battleValue = 4;
+	required int32 career = 5;
+	required int32 gender = 6;
+	required int32 isLeader = 7;
+	required string guildName = 8;
+	required string playerGuid = 9;
+	required int32 style = 10;
+	required int32 wingID = 11;
+	required int32 petID = 12;
+	required int32 star = 13;
+}
+message C_RECEIVE_ACTIVE_REWARD{
+	required int32 activeRewardID = 1;
+}
+message SynMountPropertyMsg{
+	required int32 playerMountID = 1;
+	required int32 battleValue = 2;
+	repeated MountPropertyInfoMsg propertyInfoMsg = 3;
+}
+message C_SET_PLAYER_TITLE{
+	required int32 titleID = 1;
+	required int32 action = 2;
+}
+message S_JOIN_ATHLETICS_TEAM{
+	required AthleticsTeamMsg team = 1;
+}
+message PlayerPetTrainMsg{
+	required int32 playerPetId = 1;
+	required int32 propertyID = 2;
+	required int32 level = 3;
+	required int32 curExp = 4;
+	required int32 proValue = 5;
+}
+message C_JOIN_ATHLETICS_TEAM{
+	required int32 teamID = 1;
+}
+message S_SYN_GUILD_BATTLE_SOME_BODY_START_BATTLE{
+	required string attackID = 1;
+	required string defenceID = 2;
+}
+message S_SOME_BODY_ENTER_INSATNCE{
+	required SceneFighterMsg playerFighterMsg = 1;
+	required SceneFighterMsg heroFighterMsg = 2;
+	required SceneFighterMsg petFighterMsg = 3;
+}
+message S_FINISH_ALL_DAILY_TASK{
+	required int32 taskID = 1;
+	required RewardMsg reward = 2;
+	required int32 dailyTaskStarNum = 3;
+}
+message C_TRAIN_SWEEP{
+	required int32 insType = 1;
+	required int32 level = 2;
+}
+message C_FINISH_SWEEP_TOWER{
+}
+message C_BUY_ARENA_NUM{
+}
+message C_RESOLVE_STAR_LIFE{
+	required int32 id = 1;
+	required int32 quality = 2;
+}
+message S_BUY_MYSTICAL_SHOP_ITEM{
+	required int32 playerShopID = 1;
+	required RewardMsg reward = 2;
+}
+message C_GET_ANABASIS_INFO{
+}
+message S_UPGRADE_PLAYER_BADGE{
+	required PlayerBadgeInfo badge = 1;
+	repeated PlayerBackpackMsg playerBackpackList = 2;
+}
+message C_RECEIVE_BOX_GIFT{
+}
+message C_UPGRATE_SCIENCE{
+	required int32 scienceID = 1;
+}
+message C_ENTER_RACE_BATTLE{
+	required int32 instanceID = 1;
+}
+message C_SYN_PATH_BATTLE{
+	required string fighterID = 1;
+	required string path = 2;
+	required int32 posX = 3;
+	required int32 posY = 4;
+	required int32 moveType = 5;
+}
+message S_SYN_MULTI_INS_SOME_BODY_END_BATTLE{
+	required string attackID = 1;
+	required string defenceID = 2;
+	required int32 result = 3;
+}
+message S_BUY_ELEMENT_COUNT{
+	required int32 rusult = 1;
+}
+message S_LOGIN_TEST{
+	required int32 playerID = 1;
+	required string fighterID = 2;
+	required string name = 3;
+}
+message PlayerSignMsg{
+	required int32 playerId = 1;
+	required int32 isInitial = 2;
+	required int32 days = 3;
+	repeated int32 reward = 4;
+	required int32 loop = 5;
+	required int32 lastTime = 6;
+	required int32 beginTime = 7;
+}
+message C_RECEIVE_TOTAL_RECHARGE_REWARD{
+	required int32 rewardID = 1;
+}
+message C_GET_TOWER_RANK{
+	required int32 page = 1;
+	required int32 type = 2;
+}
+message S_BUY_ITEM{
+	repeated PlayerBackpackMsg backPackList = 1;
+}
+message S_SYN_OTHER_ATHLETICS_START_BATTLE{
+	required string attackGuid = 1;
+	required string defenceGuid = 2;
+}
+message C_JEWEL_MERGE{
+	required int32 playerEquipmentID = 1;
+	required int32 holeIndex = 2;
+}
+message S_GET_GUILD_BATTLE_LOG{
+	repeated GuildBattleLog logs = 1;
+}
+message C_MOVE_ITEM_POSITION{
+	required int32 playerBackpackID = 1;
+	required int32 newItemIndex = 2;
+}
+message S_SYN_OPEN_SERVICE_RANK_TOTAL_BATTLE_VALUE{
+	repeated TotalBattleValueRankMsg ranks = 1;
+}
+message S_RECEIVE_VALUE_PACKAGE_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message C_UPGRADE_GUILD{
+}
+message S_BUY_ARENA_NUM{
+	required int32 arenaNum = 1;
+}
+message S_SYN_MULTI_INS_BATTLE_REWARD{
+	required int32 score = 1;
+	required RewardMsg rewards = 2;
+}
+message S_SUBMIT_DAILY_TASK{
+	required PlayerTaskMsg playerTask = 1;
+	required RewardMsg reward = 2;
+	required int32 submitTaskID = 3;
+	required int32 submitTaskType = 4;
+	required int32 dailyTaskStarNum = 5;
+}
+message S_JOIN_MULTI_TEAM{
+	required TeamMsg team = 1;
+}
+message C_GET_TOTAL_RANK{
+	required int32 type = 1;
+}
+message C_GET_ARENA_INFO{
+}
+message C_ANABASIS_BATTLE{
+	required int32 revive = 1;
+}
+message BattleCommonMsg{
+	required int32 instanceID = 1;
+	required int32 battleType = 2;
+	required string fighterID = 3;
+	required string atkID = 4;
+	required string defID = 5;
+	required int32 battleSubType = 6;
+}
+message S_RECEIVE_AGENT_GIFT{
+	required RewardMsg reward = 1;
+}
+message S_ROB_MINE{
+	required int32 result = 1;
+}
+message C_REMOVE_TEAM_PLAYER{
+	required string playerID = 1;
+}
+message PlayerEscortInfo{
+	required string guid = 1;
+	required int32 level = 2;
+	required int32 interceptCount = 3;
+}
+message S_SYN_SOME_BODY_COMPLETE_ESCORT{
+	required string guid = 1;
+}
+message C_SIGN_UP_GUILD_BATTLE{
+}
+message S_TIDY_BACKPACK{
+	repeated IndexItemMsg backPackList = 1;
+}
+message S_SYN_PLAYER_DAILY_ACTIVE{
+	required PlayerDailyActiveMsg playerDailyActive = 1;
+}
+message S_CHANGE_PLAYER_NAME{
+	required string newPlayerName = 1;
+	required int32 playerID = 2;
+	repeated PlayerBackpackMsg backPackList = 3;
+}
+message S_FINISH_SWEEP_TOWER{
+	required int32 finishTime = 1;
+}
+message TotalBattleValueRankMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required string playerGuid = 4;
+	required int32 career = 5;
+	required int32 level = 6;
+	required int32 heroCount = 7;
+	required int32 battleValue = 8;
+	required int32 star = 11;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_NOTICE_HAVE_NEW_MAIL{
+	required int32 mailInboxID = 1;
+}
+message S_GET_ATHLETICS_TEAM_INFO{
+	required AthleticsTeamMsg teamMsg = 1;
+	repeated SimpleAthleTeamMsg teamListMsg = 2;
+	required int32 myNum = 3;
+	required int32 page = 4;
+}
+message S_BREAK_WING{
+	required int32 wingID = 1;
+	required int32 breakLevel = 2;
+}
+message PlayerBackpackMsg{
+	required int32 playerBackpackID = 1;
+	required int32 playerID = 2;
+	required int32 itemID = 3;
+	required int32 type = 4;
+	required int32 isOverlap = 5;
+	required int32 category = 6;
+	required int32 itemIndex = 7;
+	required int32 num = 8;
+	required int32 isBinding = 9;
+}
+message C_ENTER_ENDLESS_TOWER{
+}
+message S_JEWEL_MERGE{
+	repeated PlayerBackpackMsg backPackList = 1;
+	required PlayerEquipmentMsg playerEquipment = 2;
+	required int32 holeIndex = 3;
+}
+message S_USE_ITEM{
+	repeated PlayerBackpackMsg playerBackpack = 1;
+}
+message C_RECEIVE_GOLD_VIP_EXTRA_REWARD{
+	required int32 rewardID = 1;
+}
+message C_RECEIVE_COMMON_ACT_REWARD{
+	required int32 activityID = 1;
+	required int32 rewardID = 2;
+}
+message C_GET_STAR_LIFE_LIST{
+}
+message C_SEND_INVITE_JOIN_TEAM{
+	required string inviteName = 1;
+}
+message S_ACCEPT_DAILY_TASK{
+	required PlayerTaskMsg playerTask = 1;
+}
+message S_CHANGE_PET_STATE{
+	required int32 playerPetID = 1;
+	required int32 fightState = 2;
+}
+message C_START_SWEEP_INSTANCE{
+	required int32 instanceID = 1;
+	required int32 times = 2;
+}
+message S_CREATE_ATHLETICS_TEAM{
+	required AthleticsTeamMsg team = 1;
+}
+message PlayerBattleGuide{
+	repeated CommonBattleGuide commons = 1;
+	repeated DetailBattleGuide details = 2;
+}
+message C_RECEIVE_DAILY_RECHARGE_REWARD{
+	required int32 rewardID = 1;
+}
+message C_ROB_MINE{
+	required int32 mineID = 1;
+}
+message S_SEND_CHAT{
+	required int32 chatType = 1;
+	required string content = 2;
+	required int32 sendPlayerID = 3;
+	required string playerName = 4;
+	required int32 receivePlayerID = 5;
+	required int32 sendPlayerType = 6;
+	required int32 vipLevel = 7;
+	required int32 level = 8;
+	required int32 headImg = 9;
+	required int32 star = 10;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_SYN_BUILDING_INF0{
+	required int32 buildingID = 1;
+}
+message C_GET_WAREHOUSE_LIST{
+}
+message C_LOGIN_COMPLETE{
+}
+message S_REFRESH_CROSS_ARENA_INFO{
+	repeated PlayerCrossArenaMsg challengeList = 1;
+}
+message S_GET_MINE_INFO{
+	repeated PlayerMineMsg mines = 1;
+	repeated MineBattleLog logs = 2;
+}
+message S_OPEN_THANKS_ACTIVITY_PANEL{
+	repeated ThanksActivityMsg thanksActivityMsg = 1;
+	required int32 type = 2;
+}
+message S_SOME_BODY_LEAVE_INS_TEAM{
+	required string playerGuid = 1;
+	required string leaderGuid = 2;
+}
+message AthleticsTeamMsg{
+	required int32 teamID = 1;
+	required string playerGuid = 2;
+	required string leaderName = 3;
+	required string guildName = 4;
+	repeated TeamMemberMsg memberMsg = 5;
+	required int32 status = 6;
+}
+message C_REVIVE_HERO{
+}
+message C_ACTIVE_EQUIPMENT_ATTR{
+	required int32 playerEquipID = 1;
+	required int32 attrIndex = 2;
+}
+message S_SYN_MULTI_INS_UPDATE_MONSTER_NOTICE{
+	required int64 time = 1;
+	required int32 type = 2;
+}
+message S_RESET_TRAIL{
+	required int32 result = 1;
+}
+message S_GET_ACCEPTABLE_TASK_LIST{
+	repeated int32 gameTaskIDList = 1;
+}
+message C_REWARD_OPEN_SERVICE{
+	required int32 actType = 1;
+	required int32 rewardType = 2;
+	required int32 rewardID = 3;
+}
+message S_TASTE_MOUNT{
+	required PlayerMountMsg playerMountMsg = 1;
+}
+message C_XUNBAO_LOTTERY_LOG{
+	required int32 type = 1;
+}
+message C_GET_TOTAL_BATTLE_VALUE_RANK{
+	required int32 page = 1;
+	required int32 type = 2;
+}
+message C_LOGIN_ENTER_BATTLE{
+}
+message C_RECEIVE_BETA_REWARD{
+}
+message C_OPEN_BACKPACK_GRID{
+	required int32 openNum = 1;
+	required int32 type = 2;
+}
+message MountPropertyInfoMsg{
+	required int32 propertyID = 1;
+	required int32 propertyValue = 2;
+}
+message S_STAR_ASTROLOGY{
+	repeated StarLifeMsg list = 1;
+	repeated int32 level = 2;
+}
+message C_TEST_OPEN_ALL{
+}
+message S_RACE_START_SWEEP{
+	required int32 result = 1;
+}
+message S_SYN_OPEN_SERVICE_RANK_ANABASIS{
+	repeated AnabasisRank ranks = 1;
+}
+message GrowthGiftMsg{
+	required int32 growthGiftID = 1;
+	required int32 times = 2;
+}
+message C_ATHLETICS_MEMBER_CANCEL_READY{
+}
+message C_PLAYER_WORSHIP{
+	required string targetGuid = 1;
+	required int32 playerID = 2;
+}
+message S_BREAK_MOUNT{
+	required int32 mountID = 1;
+	required int32 breakLevel = 2;
+}
+message C_CREATE_ROLE{
+	required int32 roleIndex = 1;
+	required string playerName = 2;
+	required int32 loginType = 3;
+}
+message C_RECRUIT_HERO{
+	required int32 heroID = 1;
+}
+message ArenaHeroMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 level = 4;
+	required int32 battleValue = 5;
+	required int32 carrer = 6;
+}
+message SicenceMsg{
+	required int32 scienceID = 1;
+	required int32 scienceLevel = 2;
+}
+message S_UPGRADE_PLAYER_ROLE_SKILL{
+	required PlayerRoleSkillMsg playerRoleSkill = 1;
+}
+message S_UPGRADE_GUILD_SKILL{
+	required GuildSkill skill = 1;
+	required int32 contribution = 2;
+}
+message S_SYN_MATCH_ATHLETICS_PROGRESS{
+	required int32 endTime = 1;
+}
+message C_GET_ARENA_BOX{
+}
+message C_GET_MINE_INFO{
+}
+message C_CREATE_MULTI_INSTANCE{
+	required int32 instanceID = 1;
+	required int32 multiType = 2;
+}
+message S_BUY_SHOP_ITEM{
+	repeated PlayerBackpackMsg backPackList = 1;
+	required PlayerShopItemMsg shopItemMsg1 = 2;
+	required PlayerShopItemMsg shopItemMsg2 = 3;
+}
+message C_RECEIVE_MINE_REWARD{
+}
+message S_SYN_PLAYER_FORMATION_ID{
+	required int32 formationID = 1;
+}
+message C_GET_PLAYER_PET_LIST{
+}
+message C_UPGRATE_BUILDING{
+	required int32 buildingID = 1;
+}
+message S_REVIVE_GUILD_BOSS{
+}
+message S_GET_PLAYER_BADGE_INFO{
+	repeated PlayerBadgeInfo badges = 1;
+}
+message S_RECEIVE_LUCKY_TREASURY_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message C_REVIVE_MULTI_INS{
+}
+message S_SYN_MULTI_INS_REWARD_NOTICE{
+	repeated MultiInsRewardMsg msg = 1;
+	required RewardMsg myReward = 2;
+}
+message C_RECEIVE_THANKS_ACTIVITY_REWARD{
+	required int32 activityId = 1;
+}
+message WingRankMsg{
+	required int32 playerId = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 curPhase = 4;
+	required int32 curStar = 5;
+	required string wingName = 6;
+	required int32 battleValue = 7;
+	required string playerGuid = 8;
+	required int32 star = 9;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_GET_PLAYER_RANK{
+	repeated PlayerRankMsg rankList = 1;
+	required int32 rankNum = 2;
+	required int32 playerRank = 3;
+	required int32 playerLevel = 4;
+}
+message S_TIDY_WAREHOUSE{
+	repeated IndexWarehouseMsg warehouseList = 1;
+}
+message S_SYN_MULTI_DEAD_STATUS{
+	required int64 deadTime = 1;
+	required int32 deadCount = 2;
+}
+message S_RECEIVE_ENERGY{
+}
+message C_BUY_ENERGY{
+}
+message S_RECEIVE_ONLINE_REWARD{
+	required RewardMsg reward = 1;
+	required PlayerOnlineRewardMsg playerOnlineRewardMsg = 2;
+}
+message S_SYN_REMOVE_TEAM_NOTICE{
+}
+message S_LOGIN_FAILURE{
+	required string failureMsg = 1;
+}
+message ActiveMsg{
+	required int32 activeID = 1;
+	required int32 curNum = 2;
+	required int32 curState = 3;
+}
+message C_UPDATE_GAME_STEP{
+	required int32 gameStep = 1;
+}
+message HeroPropertyInfoMsg{
+	required int32 propertyID = 1;
+	required int32 propertyValue = 2;
+}
+message C_BUY_TRAIL_COUNT{
+	required int32 instanceTpye = 1;
+}
+message S_RECEIVE_PREVIEW_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message S_SYN_SOME_BODY_QUIT_GUILD{
+	required int32 playerID = 2;
+}
+message C_TRAIN_PLAYER_PET{
+	required int32 playerPetID = 1;
+	required int32 propertyID = 2;
+	required int32 autoBuy = 3;
+}
+message S_REWARD_OPEN_SERVICE{
+	required int32 actType = 1;
+	required int32 rewardType = 2;
+	required RewardMsg reward = 3;
+}
+message TotalRankMsg{
+	required int32 type = 1;
+	required string name = 2;
+	required int32 playerId = 3;
+	required int32 career = 4;
+	required string guildName = 5;
+	required string playerGuid = 6;
+	required int32 star = 7;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_PUTON_EQUIPMENT{
+	required int32 playerEquipmentID = 1;
+	required int32 type = 2;
+	required int32 playerBackpackID = 3;
+}
+message S_UPGRATE_BUILDING{
+	required int32 buildingID = 1;
+	repeated PlayerBackpackMsg playerBackpack = 2;
+}
+message S_ENTER_CITY_SYN_CHEST{
+	repeated SmallChestMsg smallChestMsg = 1;
+	required int32 drawBigChestNum = 2;
+}
+message C_INTENSIFY_EQUIPMENT{
+	required int32 playerEquipmentID = 1;
+}
+message C_QUIT_INS_TEAM{
+}
+message S_PHASE_HERO{
+	required int32 playerHeroID = 1;
+	required int32 phase = 2;
+	required int32 type = 3;
+	required int32 baseHeroID = 4;
+}
+message C_SWEEP_ENDLESS_TOWER{
+	required int32 type = 1;
+}
+message S_CREATE_PLAYER_SKILL{
+	required PlayerRoleSkillMsg playerRoleSkill = 1;
+}
+message S_RECEIVE_VIP_DAILY_REWARD{
+	required RewardMsg reward = 1;
+}
+message S_SYN_UPD_BATTLE_GUIDE_DETAIL_FULL{
+	required DetailBattleGuide detail = 1;
+}
+message C_BUY_INSTANCE{
+	required int32 instanceID = 1;
+}
+message C_ACCEPT_TASK{
+	required int32 taskID = 1;
+}
+message C_RIDE_MOUNT{
+	required int32 mountID = 1;
+	required int32 type = 2;
+}
+message C_SUBMIT_DAILY_TASK{
+	required int32 taskID = 1;
+}
+message S_RECEIVE_TOTAL_CONSUME_ACT_REWARD{
+	required int32 activityID = 1;
+	required int32 rewardID = 2;
+	required RewardMsg reward = 3;
+	required OtherActivityMsg activity = 4;
+}
+message C_RENEW_MONTH_CARD{
+}
+message C_COMPLETE_ESCORT{
+}
+message S_ANABASIS_RANK{
+	repeated AnabasisRank ranks = 1;
+	required int32 rankNum = 2;
+	required int32 myRank = 3;
+}
+message S_BUY_RACE_COUNT{
+	required int32 success = 1;
+}
+message S_RECIEVE_GROWTH_GIFT{
+	required GrowthGiftMsg growthGiftMsg = 1;
+	repeated PlayerBackpackMsg backPack = 2;
+}
+message CrossArenaRankMsg{
+	required string playerGuid = 1;
+	required string playerName = 2;
+	required int32 carrer = 3;
+	required int32 level = 4;
+	required int32 battleValue = 5;
+	required int32 rank = 6;
+}
+message S_GET_PLAYER_PET_LIST{
+	repeated PlayerPetMsg playerPetMsg = 1;
+}
+message C_REFUSE_ATHLETICS_TEAM{
+	required string guid = 1;
+}
+message C_GET_PLAYER_DAILY_ACTIVE{
+}
+message C_RACE_START_SWEEP{
+}
+message S_DIG_DIAMOND_SELECT_INFO{
+	required DigDiamondLogMsg msg = 1;
+}
+message S_RECEIVE_ACTIVE{
+	required ActiveMsg activeMsg = 1;
+}
+message S_SYN_RACE_BATTLE_OVER{
+	required int32 curRaceId = 1;
+	required int32 curProgress = 2;
+}
+message C_GET_TRAIL_TYPE{
+}
+message S_GET_EXCHANGE_LOG_LIST{
+	repeated ExchangeLogMsg logList = 1;
+}
+message S_SYN_OPEN_SERVICE_RANK_TOWER{
+	repeated TowerRankMsg ranks = 1;
+}
+message C_DIG_DIAMOND_HELP{
+	required int32 uid = 1;
+}
+message GuildMsg{
+	required int32 guildID = 1;
+	required string guildName = 2;
+	required int32 rank = 3;
+	required int32 level = 4;
+	required int32 populationNum = 5;
+	required int32 populationMax = 6;
+	required int64 guildWealth = 7;
+	required string guildIntroduce = 8;
+	required string guildNotice = 9;
+	required int32 autoAgree = 10;
+	required string chairmanName = 11;
+	required int64 battleValue = 12;
+	required int32 chairmanID = 18;
+	required string guid = 19;
+	required int32 bossLevel = 20;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message C_CLICK_VIP_CLUB{
+	required int32 type = 1;
+}
+message S_SYN_MENU_AUTHORITY{
+	required int32 menuAuthority = 1;
+}
+message S_WEAR_STAR_LIFE{
+	repeated StarLifeMsg starlife = 1;
+	required int32 type = 2;
+}
+message S_ACCEPT_TASK{
+	required PlayerTaskMsg playerTask = 1;
+}
+message S_SYN_SOME_BODY_UPDATE_PET{
+	required int32 playerId = 1;
+	required int32 petHatchID = 2;
+}
+message C_STAR_MOUNT{
+	required int32 type = 1;
+	required int32 autoBuy = 2;
+}
+message S_ARENA_CHALLENGE{
+	required int32 arenaNum = 1;
+}
+message C_OPEN_ARENA_BATTLE_LOG{
+}
+message S_GET_PLAYER_SCIENCE_LIST{
+	repeated SicenceMsg sicenceMsg = 1;
+}
+message PlayerCrossArenaMsg{
+	required string playerGuid = 1;
+	required string playerName = 2;
+	required int32 career = 3;
+	required int32 level = 4;
+	required int32 rank = 5;
+	required int32 battleValue = 6;
+	required int32 dressStyle = 7;
+	required string guildName = 8;
+	required int32 star = 9;
+}
+message S_UPGRATE_SCIENCE{
+	required int32 scienceID = 1;
+	required int32 scienceLevel = 2;
+}
+message C_TEST_COMPLETE_TASK{
+	required int32 taskID = 1;
+}
+message C_REFUSE_TEAM{
+	required string inviteID = 1;
+}
+message S_WORLD_NOTICE_INFO{
+	required int32 type = 1;
+	repeated string noticeData = 2;
+}
+message S_GET_PLAYER_MOUNT{
+	required PlayerMountMsg playerMountMsg = 1;
+}
+message C_DIG_DIAMOND_DIG{
+}
+message S_GET_ARENA_INFO{
+	repeated PlayerArenaMsg challengeList = 1;
+	required int32 rank = 2;
+	required int64 arenaTime = 3;
+	required int32 arenaReward = 4;
+	required int32 rewardFlag = 5;
+	repeated ChallengeLogMsg challengeLogList = 6;
+	required int32 bestRank = 7;
+	required int32 hasNewLog = 8;
+}
+message S_REMOVE_GUILD_PLAYER{
+	required int32 removedPlayerID = 1;
+	required int64 guildWealth = 2;
+}
+message S_SYN_PLAYER_PROPERTY{
+	required SynPlayerPropertyMsg playerPropertyMsg = 1;
+}
+message C_QUIT_GUILD_BATTLE{
+}
+message PlayerMineMsg{
+	required string guid = 1;
+	required int32 mineID = 2;
+	required string playerName = 3;
+	required int64 startTime = 4;
+	required int32 rob = 5;
+	required int32 robCount = 6;
+}
+message S_RESET_ANABASIS{
+	required int32 currentLevel = 1;
+	required int32 currentProgress = 2;
+	required int32 resetAnabasis = 3;
+	required int32 buyAnabasis = 4;
+}
+message S_REPLACE_ATTR{
+	required PlayerEquipmentMsg playerEquipment = 1;
+}
+message S_SYN_ENTER_GUILD_BATTLE{
+	required SceneFighterMsg fighters = 1;
+}
+message S_SET_PLAYER_TITLE{
+	required int32 titleID = 1;
+	required int32 unLoadID = 2;
+}
+message S_GET_BACKPACK_LIST{
+	repeated PlayerBackpackMsg backPackList = 1;
+	required int32 backpackSize = 2;
+}
+message MountRankMsg{
+	required int32 playerId = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 curPhase = 4;
+	required int32 curStar = 5;
+	required string mountName = 6;
+	required int32 battleValue = 7;
+	required string playerGuid = 8;
+	required int32 star = 9;
+	required int32 mountNum = 10;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message S_GET_ARENA_BOX{
+	required RewardMsg reward = 1;
+}
+message S_SYN_REWARD_MSG{
+	required RewardMsg msg = 1;
+}
+message C_RECEIVE_SEVEN_DAYS_LOGIN_GIFT{
+	required int32 rewardID = 1;
+}
+message S_SYN_OPEN_SERVICE_RANK_LEVEL{
+	repeated PlayerRankMsg ranks = 1;
+}
+message C_BUY_OPEN_INVEST_ACT{
+}
+message C_RECEIVE_BUILDING_MONEY{
+}
+message C_CHANGE_PET_STATE{
+	required int32 playerPetID = 1;
+	required int32 type = 2;
+}
+message C_COMPOSE_HERO_EQUIP{
+	required int32 playerHeroID = 1;
+	required int32 pos = 2;
+	required int32 type = 3;
+}
+message S_SYN_OPEN_SERVICE_RANK_HERO{
+	repeated HeroRankMsg ranks = 1;
+}
+message S_TRAIN_PLAYER_PET{
+	required int32 curPhase = 1;
+	required PlayerPetTrainMsg playerPetTrainMsg = 2;
+	required int32 temple = 3;
+}
+message C_INSPIRE_ATHLETICS_BATTLE{
+	required int32 type = 1;
+}
+message S_SKIP_BATTLE{
+	required bool winOpt = 1;
+	required int32 battleType = 2;
+}
+message S_MAKE_EQUIPMENT{
+	required int32 playerEquipmentID = 1;
+	required int32 equipmentID = 2;
+	required int32 holeNum = 3;
+	repeated PlayerBackpackMsg playerBackpackList = 4;
+}
+message S_CANCEL_APPLY{
+	required int32 guildID = 1;
+}
+message S_SYN_SOME_BODY_END_MINE{
+	required int32 mineID = 1;
+}
+message C_OPEN_LEVEL_REWARD_PANEL{
+}
+message S_STAR_MOUNT{
+	required int32 curStar = 1;
+	required int32 curStarExp = 2;
+	required int32 temple = 3;
+}
+message S_SYN_UPD_BATTLE_GUIDE_DETAIL{
+	required int32 id = 1;
+	repeated BattleGuideInfo details = 2;
+}
+message C_GET_GUILD_RANK{
+	required int32 page = 1;
+	required int32 type = 2;
+}
+message TeamMsg{
+	required int32 teamID = 1;
+	required int32 instanceID = 2;
+	required int32 num = 3;
+	required int32 teamStatus = 4;
+	required string leaderName = 5;
+	required string guildName = 6;
+	required string playerGuid = 7;
+	repeated TeamPlayerMsg teamPlayers = 8;
+}
+message S_RECEIVE_BOX_GIFT{
+	required RewardMsg reward = 1;
+}
+message C_GET_PLAYER_BADGE_INFO{
+}
+message C_GUILD_SHOP_EXCHANGE{
+	required int32 itemID = 1;
+	required int32 num = 2;
+}
+message S_SYN_PLAYER_DAILY_DATA{
+	required SynPlayerDailyDataMsg playerDailyData = 1;
+}
+message C_TIDY_BACKPACK{
+}
+message S_RECEIVE_BUILDING_MONEY{
+	required int32 result = 1;
+}
+message S_READ_INBOX_MAIL{
+	required MailInboxMsg mailInbox = 1;
+}
+message S_XUNBAO_EXCHANGE{
+	required int32 score = 1;
+	repeated PlayerBackpackMsg backPackList = 2;
+}
+message S_SYN_PLAYER_WORSHIP{
+	required int32 worship = 1;
+	required string targetGuid = 2;
+}
+message OpenCommonRankMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 career = 3;
+	required int32 value = 4;
+	required int32 rank = 5;
+}
+message C_QQ_RECEIVE_REWARD_DAILY{
+	required int32 rewardType = 1;
+	required int32 rewardID = 2;
+}
+message S_SYN_SOME_BODY_ROB_MINE{
+	required PlayerMineMsg mine = 1;
+}
+message S_SYN_UPDATE_CITY_LINE{
+	repeated int32 branchs = 1;
+}
+message S_DIG_DIAMOND_SUBMIT{
+	required int32 state = 1;
+}
+message RaceRankMsg{
+	required int32 playerID = 1;
+	required string playerGuid = 2;
+	required string playerName = 3;
+	required int32 career = 4;
+	required int32 rank = 5;
+	required int32 progress = 6;
+	required int32 star = 7;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message C_GET_BACKPACK_LIST{
+}
+message C_TRANSFE_MULTI_INS_LEADER{
+	required string playerID = 1;
+}
+message C_OCCUPY_MINE{
+	required int32 mineID = 1;
+}
+message C_SUBMIT_QUESTIONNAIRE{
+	required int32 questionID = 1;
+	repeated int32 options = 2;
+	required string proposal = 3;
+}
+message S_UP_TASK_STAR{
+	required PlayerTaskMsg playerTask = 1;
+	required int32 delTaskID = 2;
+}
+message C_RESET_ANABASIS{
+}
+message C_GROUP_FRIEND{
+	required int32 friendID = 1;
+	required int32 groupID = 2;
+}
+message S_SYN_MATCH_ATHLETICS_SUCCESS{
+}
+message C_DIG_DIAMOND_NOTICE{
+}
+message C_CHANGE_FORMATION{
+	required int32 formationID = 1;
+}
+message C_BUY_ANABASIS_RESET{
+}
+message S_SYN_SOME_BODY_ENTER_GUILD{
+	required GuildPlayerMsg player = 1;
+}
+message CalRoundMsg{
+	required int32 curRound = 1;
+	repeated SkillBuffMsg skillBuffMsg = 2;
+	repeated SkillCDMsg skillCDMsg = 3;
+	required int32 winOpt = 4;
+}
+message C_GET_RACE_INFO{
+}
+message S_SYN_BATTLE_REQUEST{
+	required int32 chanllegeID = 1;
+	required string name = 2;
+	required int32 requestID = 3;
+}
+message S_PLAYER_WORSHIP{
+	required int32 worship = 1;
+	required string targetGuid = 2;
+}
+message C_DIAL_EXCHANGE{
+	required int32 itemId = 1;
+	required int32 count = 2;
+}
+message S_XUNLEI_GET_GOLD_VIP_INFO{
+	required PlayerGoldVipMsg goldVipMsg = 1;
+}
+message C_TAKETO_WAREHOUSE{
+	required int32 playerBackpackID = 1;
+}
+message C_REMOVE_FRIEND{
+	required int32 friendID = 1;
+}
+message S_GET_INBOX_PAGE_LIST{
+	repeated MailInboxMsg inboxPageList = 1;
+	required int32 inboxMailNum = 2;
+	required int32 haveNewMail = 3;
+}
+message C_GET_OPEN_SERVICE_ACT_RANK{
+	required int32 type = 1;
+}
+message C_GET_DIAL_INFO{
+}
+message C_RECEIVE_CHAPTER_REWARD{
+	required int32 rewardID = 1;
+}
+message S_BUY_MC{
+	required int32 buyMc = 1;
+}
+message S_SYN_INTERCEPT_ESCORT_RESULT{
+	required int32 interceptCount = 1;
+	required RewardMsg rewards = 2;
+}
+message C_RIDE_WING{
+	required int32 wingID = 1;
+	required int32 type = 2;
+}
+message S_TAKETO_BACKPACK{
+	required PlayerWarehouseMsg playerWarehouse = 1;
+	repeated PlayerBackpackMsg playerBackpackList = 2;
+}
+message C_USE_BACKPACK_ITEM{
+	required int32 playerBackpackID = 1;
+	required int32 num = 2;
+}
+message C_GET_BUILDING_MONEY{
+}
+message C_RACE_SWEEP_REWARD{
+}
+message S_SYN_ATHLETICS_MEMBER_CANCEL_READY{
+	required string guid = 1;
+}
+message C_CREATE_FRIEND_GROUP{
+	required string name = 1;
+}
+message S_SYN_PET_PROPERTY{
+	required SynPetPropertyMsg petPropertyMsg = 1;
+}
+message C_ENTER_BATTLE{
+	required string fighterID = 1;
+}
+message S_OPEN_TIME_QUEUE{
+	required int32 buildQueue = 1;
+}
+message S_SWEEP_ENDLESS_REWARD{
+	required int32 addMoney = 1;
+	required int32 addExp = 2;
+	repeated SweepItemInfoMsg itemInfoMsg = 3;
+	required int32 addMc = 4;
+	required int32 count = 5;
+}
+message S_SYN_RELIVE_TIME{
+	required int64 endTime = 1;
+}
+message HeroRankMsg{
+	required int32 playerID = 1;
+	required string playerName = 2;
+	required int32 rank = 3;
+	required int32 battleValue = 4;
+	required int32 playerHeroID = 5;
+	required int32 heroID = 6;
+	required string heroName = 7;
+	required int32 level = 8;
+	required string playerGuid = 9;
+	required int32 star = 10;
+	required int32 heroStar = 13;
+	required int32 namePrefix1 = 101;
+	required int32 namePrefix2 = 102;
+}
+message C_CREATE_GUILD{
+	required string guildName = 1;
+}
+message S_SYN_GUILD_BATTLE_SOME_BODY_END_BATTLE{
+	required string attackID = 1;
+	required string defenceID = 2;
+	required string winID = 3;
+	required bool winDeath = 4;
+}
+message S_SYN_THANKS_ACTIVITY{
+	required ThanksActivityMsg thanksActivityMsg = 1;
+	required int32 type = 2;
+}
+message C_SEND_CHAT{
+	required int32 chatType = 1;
+	required string content = 2;
+	required int32 receivePlayerID = 3;
+}
+message S_COMPOSE_HERO_EQUIP_ALL{
+	repeated PlayerHeroEquipMsg playerHeroEquipMsg = 1;
+}
+message S_SYN_DEL_TITLE{
+	required int32 titleID = 1;
+}
+message S_SYN_TRANSFE_MULTI_INS_LEADER{
+	required string sourceGuid = 1;
+	required string leaderGuid = 2;
+}
+message C_WASH_EQUIPMENT_ATTR{
+	required int32 playerEquipID = 1;
+	required int32 type = 2;
+}
+message TeamMemberMsg{
+	required string guid = 1;
+	required string name = 2;
+	required int32 career = 3;
+	required int32 level = 4;
+	required int32 battleValue = 5;
+	required int32 isLeader = 6;
+	required string guildName = 7;
+	required int32 style = 8;
+	required int32 wingID = 9;
+	required int32 petID = 10;
+	required int32 star = 11;
+	required int32 ready = 12;
+}
+message RewardMsg{
+	required int32 money = 1;
+	required int32 exp = 2;
+	repeated PlayerBackpackMsg itemList = 3;
+	repeated PlayerBackpackMsg equipmentBackpackList = 4;
+	repeated PlayerEquipmentMsg playerEquipmentList = 5;
+	required int32 bindDiamond = 6;
+	required int32 mc = 7;
+	required int32 guildContribution = 8;
+	required int32 diamond = 9;
+	required int32 honor = 10;
+	required int32 guildWealth = 11;
+	repeated TitleInfo titles = 12;
+}
+message C_RECEIVE_AGENT_GIFT{
+}
+message S_GET_MOUNT_RANK{
+	repeated MountRankMsg rankList = 1;
+	required int32 rankNum = 2;
+	required int32 playerRank = 3;
+	required int32 battleValue = 4;
+}
+message S_QQ_RECEIVE_REWARD_DAILY{
+	required RewardMsg rewardMsg = 1;
+	required int32 rewardType = 2;
+	required int32 rewardID = 3;
+}
+message S_REMOVE_FRIEND{
+	required int32 friendID = 1;
+}
+message S_GET_GUIDE_LIST_BYPAGE{
+	repeated GuildMsg guildList = 1;
+	required int32 size = 2;
+}
+message S_SYN_GUILD_BOSS_RANK{
+	repeated GuildBossRankMsg ranks = 1;
+	required int32 myDmage = 2;
+	required int32 myRank = 3;
+}
+message C_RECEIVE_SINGLE_RECHARGE_REWARD{
+	required int32 rewardID = 1;
+}
+message S_SEND_FRIEND_GFIT{
+	required int32 status = 1;
+}
+message C_USE_ITEM{
+	required int32 itemID = 1;
+	required int32 num = 2;
+	required int32 sel = 3;
+}
+message C_GET_GUILD_BATTLE_SIGN_UP_RANK{
+	required int32 page = 1;
+}
+message C_GET_CROSS_ARENA_INFO{
+}
+message C_HONOR_SHOP_EXCHANGE{
+	required int32 itemID = 1;
+	required int32 num = 2;
+}
+message S_CREATE_HERO_SKILL{
+	required PlayerHeroSkillMsg playerHeroSkill = 1;
+}
+message C_GET_OPEN_SERVICE_ACT_INFO{
+}
+message S_ENTER_GUILD_BATTLE{
+	repeated SceneFighterMsg fighters = 1;
+	repeated GuildInspireMsg inspires = 2;
+	repeated GuildBattleGuildMsg guilds = 3;
+	required int32 myKill = 4;
+	required int32 myDeath = 5;
+	required int32 kill = 6;
+}
+message S_GET_GP_APP_INV_LIST_BY_PLAYER_ID{
+	repeated GuildPlayerAppInvMsg guildPlayerAppList = 1;
+	repeated GuildPlayerAppInvMsg guildPlayerInvList = 2;
+}
+message C_QUIT_GUILD{
+}
+message S_SYN_CROSS_ARENA_NPC{
+	repeated SceneFighterMsg playerFighterMsg = 1;
+}
+message S_DIG_DIAMOND_GET_INFO{
+	required DigDiamondLogMsg msg = 1;
+}
+message S_RETREAT_BATTLE{
+	required int32 result = 1;
+}
+message C_BUY_MONEY{
+}
+message S_GET_TOTAL_RANK{
+	repeated TotalRankMsg totalRankMsg = 1;
+}
+message C_GET_GUILD_BATTLE_VS{
+}
+message C_USE_HERO_ABILITY{
+	required int32 playerHeroID = 1;
+	required int32 itemID = 2;
+}
+message C_PICKUP_STAR_LIFE{
+	required int32 id = 1;
+}
+message S_SYN_BOSS_START{
+	required int64 endTime = 1;
+}
+message S_MERGE_INTENSIFY_STONE{
+	repeated PlayerBackpackMsg playerBackpackList = 1;
+}
+message S_DRAW_SMALL_CHEST{
+	required ModifySmallChestMsg smallChestMsg = 1;
+	required RewardMsg reward = 2;
+	required int32 isBoxFighter = 3;
+}
+message S_MOVE_ITEM_POSITION{
+	repeated IndexItemMsg moveItemList = 1;
+}
+message GuildBossRankMsg{
+	required int32 rank = 1;
+	required int32 playerID = 2;
+	required string name = 3;
+	required int32 damage = 4;
+	required int32 career = 5;
+}
+message GuildBattleLog{
+	required string guildName = 1;
+	required bool win = 2;
+	required string date = 3;
+}
+message C_STRENGTHEN_STAR_LIFE{
+	required int32 id = 1;
+}
+message S_ANABASIS_SWEEP{
+	required int32 result = 1;
+	required int32 level = 2;
+}
+message S_SYN_UPDATE_ACTIVITY_STATUS{
+	required OtherActivityMsg activity = 1;
+}
+message S_SOME_BODY_QUIT_INSATNCE{
+	required string fighterID = 1;
+}
+message C_BATCH_SELL_ITEM{
+	repeated int32 playerBackpackIDList = 1;
+}
+message CommonBattleGuide{
+	required int32 type = 1;
+	required int32 style = 2;
+	required int32 phyle = 3;
+	required int32 value = 4;
+}
+message S_SYN_INVITE_ATHLETICS_TEAM{
+	required int32 teamID = 1;
+	required string guid = 2;
+	required string name = 3;
+}
+message C_OPEN_HOLE{
+	required int32 playerEquipmentID = 1;
+}
+message S_OPEN_HERO_ACTIVITY_PANEL{
+	repeated HeroActivityMsg heroActivityMsg = 1;
+}
+message S_GET_PLAYER_ROLE_SKILL_LIST{
+	repeated PlayerRoleSkillMsg playerRoleSkillList = 1;
+}
+message S_MOUNT_EQUIP_COMPOSE{
+	required int32 mountID = 1;
+	required int32 pos = 2;
+	required int32 equipID = 3;
+}
+message C_RECEIVE_SIGN_REWARD{
+	required int32 rewardID = 1;
+	required int32 rewardType = 2;
+}
+message S_APPLY_JOIN_GUILD{
+	required GuildPlayerAppInvMsg guildPlayerApp = 1;
+	required int32 guildID = 2;
+	required string guildName = 3;
+}
+message C_CREATE_ATHLETICS_TEAM{
+}
+message S_QUIT_INSTANCE{
+}
+message S_GET_RACE_RANK{
+	repeated RaceRankMsg raceRankMsg = 1;
+	required int32 rankNum = 2;
+	required int32 myRank = 3;
+	required int32 myProgress = 4;
+}
+message S_SYN_PLAYER_BACKPACK{
+	repeated PlayerBackpackMsg backPackList = 1;
+}
+message C_ENTER_ATHLETICS_SCENE{
+}
+message OtherActivityMsg{
+	required int32 activityID = 1;
+	required int32 value = 2;
+	required string reward = 3;
+}
+message S_RECEIVE_ATTACHMENT_BY_IDS{
+	repeated RewardMsg reward = 1;
+}
+message SkillCDMsg{
+	required int32 roleSkillID = 1;
+	required int32 leftSkillCD = 2;
+}
+message S_DIG_DIAMOND_UPDATE_INFO{
+	required DigDiamondLogMsg msg = 1;
+}
+message S_RECEIVE_SIGN_REWARD{
+	required RewardMsg reward = 1;
+	required int32 rewardID = 2;
+	required int32 rewardType = 3;
+	required PlayerSignMsg playerSignMsg = 4;
+}
+message S_START_ESCORT{
+	required PlayerEscortInfo info = 1;
+}
+message S_AGREE_JOIN{
+	required GuildPlayerMsg guildPlayer = 1;
+	required int32 playerID = 2;
+}
+message S_SYN_DIAL_ACT_POOL{
+	required int32 pool = 1;
+	repeated PlayerDialLogMsg globalLogs = 2;
+}
+message S_RECEIVE_CHAPTER_REWARD{
+	required int32 rewardID = 1;
+	repeated PlayerBackpackMsg backPackList = 2;
+}
+message S_EDIT_FRIEND_GROUP{
+	required FriendGroupMsg group = 1;
+}
+message PlayerYellowMsg{
+	required int32 isYellowVip = 1;
+	required int32 isYellowYearVip = 2;
+	required int32 yellowVipLevel = 3;
+}
+message S_SYN_HERO_PROPERTY{
+	required SynHeroPropertyMsg heroPropertyMsg = 1;
+}
+message GuildPlayerAppInvMsg{
+	required int32 guildID = 1;
+	required int32 playerID = 2;
+	required int32 type = 3;
+	required int64 createTime = 4;
+	required string guildName = 5;
+	required int32 level = 6;
+	required string chairmanName = 7;
+	required string playerName = 8;
+	required int32 career = 9;
+	required int32 playerLevel = 10;
+	required int32 battleValue = 11;
+}
+message S_SYN_GUILD_BOSS_REVIVE_TIME{
+	required int64 reviveTime = 1;
+}
+message S_ENDLESS_TOWER_OVER{
+}
+message S_LUCKY_TREASURY_HERO{
+	required PlayerHeroMsg playerHeroMsg = 1;
+}
+message C_GET_BOSS_STATE{
+}
+message C_BUY_STAR_LIFE{
+	required int32 itemID = 1;
+}
+message S_CHOOSE_PAY{
+	required string payUrl = 1;
+	required string payToken = 2;
+}
+message C_ENTER_BOSS_INSTANCE{
+	required int32 bossMapID = 1;
+}
+message S_COMPOSE_HERO_EQUIP{
+	required PlayerHeroEquipMsg playerHeroEquipMsg = 1;
+}
+message S_SYN_GUILD_PLAYER_STATUS{
+	required int32 playerID = 1;
+	required int64 onlineTime = 2;
+}
+message S_INSPIRE_GUILD_BATTLE{
+	repeated PlayerBackpackMsg playerBackpack = 1;
+}
+message S_GET_BUILDING_MONEY{
+	required int32 money = 1;
+}
+message S_SYN_HERO_EXP{
+	required int32 playerHeroID = 1;
+	required int32 heroExp = 2;
+	required int32 level = 3;
+}
+message S_RECEIVE_VIP_LEVEL_REWARD{
+	required RewardMsg reward = 1;
+	required string levelReward = 2;
+}
+message SynPlayerProExtMsg{
+	repeated ProExtInfoMsg proExtInfoMsg = 1;
+}
+message C_GET_PLAYER_ROLE_SKILL_LIST{
+}
+message C_START_GUILD_BATTLE_CHANLLEGE{
+	required string fid = 1;
+}
+message QQLevelMsg{
+	repeated int32 rewardID = 1;
+}
+message S_OTHER_LEAVE_ATHLETICS_TEAM{
+	required string guid = 1;
+}
+message S_SYN_DISAGREE_JOIN_NOTICE{
+	required int32 guildID = 1;
+	required string guildName = 2;
+}
+message S_CHANGE_CONCAT_STATUS{
+	required int32 status = 1;
+}
+message PlayerFacadeMsg{
+	required int32 playerId = 1;
+	required string playerName = 2;
+	required int32 career = 3;
+}
+message S_SYN_MULTI_INS_UPDATE_MONSTER{
+	repeated SceneFighterMsg monsters = 1;
+}
+message S_START_SWEEP_INSTANCE{
+	required int32 times = 1;
+	required int32 addMoney = 2;
+	required int32 addExp = 3;
+	repeated SweepItemInfoMsg itemInfoMsg = 4;
+	required int32 instanceID = 5;
+}
+message S_SOME_BODY_FIGHTING{
+	required string fighterID = 1;
+}
+message S_RECEIVE_LEVEL_REWARD{
+	required RewardMsg reward = 1;
+	required int32 levelRewardID = 2;
+	required int32 times = 3;
+}
+message S_GET_PLAYER_EQUIPMENT_LIST_BY_STATE{
+	repeated PlayerEquipmentMsg playerEquipmentList = 1;
+}
+message S_QQ_RECEIVE_REWARD_LEVEL{
+	required QQLevelMsg levelMsg = 1;
+	required RewardMsg rewardMsg = 2;
+}
+message RankPlayerInfo{
+	required int32 type = 1;
+	required int32 playerID = 2;
+	required string name = 3;
+	required int32 rank = 4;
+	required int32 value = 5;
+	required int32 status = 6;
+	required int32 extStatus = 7;
+	required int32 baseStatus = 8;
+	required int32 career = 9;
+}
+message S_GET_STAR_LIFE_LIST{
+	repeated StarLifeMsg list = 1;
+	required int32 grid = 2;
+}
+message C_LOGIN_GAME{
+	required string userName = 1;
+	required string site = 2;
+	required string key = 3;
+	required int32 loginMethod = 4;
+	required string time = 5;
+	required string sign = 6;
+	required int32 client = 7;
+	required int32 cm = 8;
+	required int32 isgoldvip = 9;
+	required int32 goldlevel = 10;
+	required int32 isAnnualMember = 11;
+	required int32 betaLevel = 12;
+	required int32 betaReward = 13;
+	required string pf = 101;
+	required string pfKey = 102;
+	required string openKey = 103;
+}
+message S_RECEIVE_INBOX_ATTACHMENT{
+	required RewardMsg reward = 1;
+	required int32 mailInboxID = 2;
+}
+message S_SYN_REMOVE_ATHLETICS_MEMBER{
+	required string guid = 1;
+}
+message S_RECEIVE_MONTH_CARD{
+	required int32 cardID = 1;
+}
+message S_DISAGREE_JOIN{
+	required int32 applyPlayerID = 1;
+}
+message S_GET_WAREHOUSE_LIST{
+	repeated PlayerWarehouseMsg backPackList = 1;
+	required int32 warehouseSize = 2;
+}
+message S_SYN_GUILD_BOSS_OVER{
+	repeated GuildBossRankMsg ranks = 1;
+	required int32 level = 2;
+	required bool result = 3;
+}
+message S_SIGN_UP_GUILD_BATTLE{
+	required GuildBattleGuildMsg guild = 1;
+}
+message GuildInspireMsg{
+	required int32 type = 1;
+	required int32 level = 2;
+}
+message S_RECEIVE_ACTIVE_REWARD{
+	required RewardMsg reward = 1;
+	required int32 activeRewardID = 2;
+}
+message C_GET_TRAIL_REMAIN{
+}
+message C_BUY_RACE_COUNT{
+}
+message AthleticsPlayerMsg{
+	required string guid = 1;
+	required string name = 2;
+	required int32 killNum = 3;
+	required int32 hurt = 4;
+	required int32 career = 5;
+	required int32 star = 6;
+}
+message C_TIDY_WAREHOUSE{
+}
+message BuildingMsg{
+	required int32 buildingID = 1;
+	required int32 money = 2;
+}
+message S_CREATE_MULTI_INSTANCE{
+	required TeamMsg team = 1;
+}
+message S_REFRESH_MYSTICAL_SHOP{
+	repeated PlayerMysticalShopMsg shopMsg = 1;
+}
+message MonsterDropMsg{
+	required string dropID = 1;
+	required int32 id = 2;
+	required int32 type = 3;
+	required int32 num = 4;
+	required string fighterID = 5;
+}
+message PlayerHeroSkillMsg{
+	required int32 playerHeroSkillID = 1;
+	required int32 playerID = 2;
+	required int32 baseHeroID = 3;
+	required int32 skillID = 4;
+	required int32 baseSkillID = 5;
+	required int32 level = 6;
+}
+message C_GET_PLAYER_EQUIPMENT_LIST_BY_STATE{
+	required int32 state = 1;
+}
+message C_RECEIVE_PREVIEW_REWARD{
+	required int32 rewardID = 1;
+}
+message SynPlayerDailyDataMsg{
+	required int32 vipDailyReward = 1;
+	required int32 everyOnlineTime = 2;
+	required int32 buyEnergy = 3;
+	required int32 refreshShopNum = 4;
+	required int32 digDiamondTimes = 5;
+	required int32 digDiamondHelpTimes = 6;
+	required int32 arenaNum = 7;
+	required int32 buyArenaNum = 8;
+	required int32 enterElement = 9;
+	required int32 buyElement = 10;
+	required int32 sweepTower = 11;
+	required int32 buySweepTower = 12;
+	required int32 dailyTaskFinishNum = 13;
+	required int32 dailyTaskStarNum = 14;
+	required string dailyRewardStarInfo = 15;
+	required int32 buyMoney = 16;
+	required int32 buyMc = 17;
+	required int32 monthCardReward1 = 18;
+	required int32 monthCardReward2 = 19;
+	required int32 dailyActiveReward = 20;
+	required int32 enterTrial = 21;
+	required int32 buyTrial = 22;
+	required int32 treasuryCount = 23;
+	required int64 treasuryFree = 24;
+	required string singleRechargeReward = 25;
+	required int32 dailyRechargeAmount = 26;
+	required string dailyRechargeReward = 27;
+	required int32 resetAnabasis = 28;
+	required int32 buyAnabasis = 29;
+	required int32 physicsTrainProgress = 30;
+	required int32 magicTrainProgress = 31;
+	required int32 physicsTrainLevel = 32;
+	required int32 magicTrainLevel = 33;
+	required int32 trainType = 34;
+	required int32 trainSweepID = 35;
+	required int32 physicsTrainComplete = 36;
+	required int32 magicTrainComplete = 37;
+	required int32 dailyEscort = 38;
+	required int32 dailyIntercept = 39;
+	required int32 dailyRefreshGoddess = 40;
+	required int32 dailyMultiInsCount = 41;
+	required int32 dailyOccupyCount = 42;
+	required int32 raceNum = 43;
+	required int32 buyRaceNum = 44;
+	required int32 totalRechargeActAmount = 45;
+	required string totalRechargeActReward = 46;
+	required int32 luckyTreasuryActCount = 47;
+	required string luckyTreasuryActReward = 48;
+	required string valuePackageActReward = 49;
+	required int32 crossArenaNum = 50;
+	required int32 buyCrossArenaNum = 51;
+	required int32 athleticsNum = 52;
+	required int32 dailyFriendSend = 53;
+	required int32 dailyFriendReceive = 54;
+	required string sevenDaysRewards = 55;
+	required int32 sevenDaysLogin = 56;
+	repeated OtherActivityMsg otherActs = 57;
+	required int32 dailyTowerCount = 59;
+	required int32 yellowNormalReward = 101;
+	required int32 yellowYearReward = 102;
+	required int32 yellowFreshReward = 103;
+}
+message C_SHOW_HERO{
+	required int32 playerID = 1;
+	required int32 playerHeroID = 2;
+}
+message S_SYN_ATHLETICS_INFO{
+	required string guid = 1;
+	required int32 killNum = 2;
+	required int32 hurt = 3;
+}
+message S_RECEIVE_COMPLETE_RECORD{
+	required int32 towerID = 1;
+	required RewardMsg reward = 2;
+}
+message S_SYN_EXIT_GUILD_BATTLE{
+	required string fighters = 1;
+}
+message S_XUNBAO_LOTTERY{
+	repeated LotteryRewardMsg lotteryRewardMsg = 1;
+	required int32 score = 2;
+	repeated PlayerBackpackMsg backPackList = 3;
+	required int32 treasuryCount = 4;
+	required int64 treasuryFree = 5;
+	required int32 type = 6;
+}
+message S_SENT_CHEST_END{
+}
+message S_RECEIVE_HERO_ACTIVITY_REWARD{
+	required int32 activityId = 1;
+	required int32 number = 2;
+	required RewardMsg reward = 3;
+}
+message SynPetPropertyMsg{
+	required int32 playerPetID = 1;
+	required int32 battleValue = 2;
+	repeated PetPropertyInfoMsg propertyInfoMsg = 3;
+}
+message S_RECEIVE_ACTIVE_COMPLETE{
+	required RewardMsg reward = 1;
+	required int32 activeID = 2;
+}
+message S_RECEIVE_DAILY_TASK_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message S_SYN_FRIEND_STATUS{
+	required FriendMsg friend = 1;
+}
+message S_UPDATE_GUILD_NOTICE{
+	required string guildNotice = 1;
+}
+message S_COMPOSE_MOUNT{
+	required OwnerMountMsg ownerMount = 1;
+}
+message C_LOGIN_FRIEND_LIST{
+}
+message S_SYN_GET_NEW_TITLE{
+	required TitleInfo title = 1;
+}
+message S_BUY_SWEEP_TOWER{
+	required int32 result = 1;
+}
+message C_REFRESH_CROSS_ARENA_INFO{
+}
+message C_BUY_SHOP_ITEM{
+	required int32 shopItemID = 1;
+	required int32 num = 2;
+}
+message C_START_MATCH_ATHLETICS{
+}
+message S_AGREE_ALL_APPLY{
+	repeated GuildPlayerMsg guildPlayerList = 1;
+}
+message PlayerShopItemMsg{
+	required int32 shopItemID = 1;
+	required int32 num = 2;
+}
+message S_ENTER_BATTLE{
+	required BattleCommonMsg commonMsg = 1;
+	repeated BattleFighterMsg fighterMsg = 2;
+	repeated SkillResultMsg skillResultMsg = 3;
+	required CalRoundMsg calRoundMsg = 4;
+	required string attackID = 5;
+}
+message S_QUIT_INS_TEAM{
+}
+message S_GET_PLAYER_WING{
+	required PlayerWingMsg playerWingMsg = 1;
+}
+message S_GET_CROSS_ARENA_RANK_LIST{
+	repeated CrossArenaRankMsg rankList = 1;
+}
+message S_RECEIVE_MINE_REWARD{
+	required RewardMsg reward = 1;
+}
+message S_BUY_INSTANCE{
+	required int32 instanceID = 1;
+	required int32 rusult = 2;
+}
+message S_QUIT_BATTLE{
+	required CalRoundMsg calRoundMsg = 1;
+	required int32 battleType = 2;
+}
+message S_GET_PLAYER_DAILY_ACTIVE{
+	required PlayerDailyActiveMsg playerDailyActive = 1;
+}
+message S_SET_AUTO_AGREE{
+	required int32 autoAgree = 1;
+}
+message S_RIDE_WING{
+	required int32 rideWingID = 1;
+}
+message S_TAKETO_WAREHOUSE{
+	required PlayerBackpackMsg playerBackpack = 1;
+	repeated PlayerWarehouseMsg playerWarehouseList = 2;
+}
+message S_SYN_TRAIN_BATTLE_OVER{
+	required int32 insType = 1;
+	required int32 progress = 2;
+	required int32 currentLevel = 3;
+	required int32 maxLevel = 4;
+}
+message C_MAKE_EQUIPMENT{
+	required int32 playerEquipmentID = 1;
+}
+message C_QUIT_ATHLETICS_TEAM{
+}
+message S_QQ_RECEIVE_REWARD_FRESH{
+	required int32 yellowFreshReward = 1;
+	required RewardMsg rewardMsg = 2;
+}
+message S_SHOW_HERO{
+	required PlayerHeroMsg playerHeroMsg = 1;
+	repeated PlayerHeroSkillMsg playerHeroSkillList = 2;
+	repeated PlayerHeroEquipMsg playerHeroEquipList = 3;
+	repeated StarLifeInfoMsg starLifeList = 4;
+}
+message S_UPGRADE_PLAYER_HERO_SKILL{
+	required PlayerHeroSkillMsg playerHeroSkill = 1;
+}
+message S_PICKUP_STAR_LIFE{
+	repeated int32 id = 1;
+}
+message C_OPEN_MINE_LOG{
+}
+message C_QQ_GET_LEVEL_LOG{
+}
+message SweepItemInfoMsg{
+	required int32 itemID = 1;
+	required int32 itemNum = 2;
+}
+message S_VERIFY_SUCCESS_REQDATA{
+	required LoginMsg loginMsg = 1;
+}
+message S_XUNBAO_LOTTERY_LOG{
+	repeated LuckyTreasuryLogMsg luckyTreasuryLogMsg = 1;
+}
+message C_EVOLVE_MOUNT{
+	required int32 mountID = 1;
+}
+message C_GET_CROSS_ARENA_RANK_LIST{
+	required int32 page = 1;
+}
+message C_CHANGE_CONCAT_STATUS{
+	required int32 status = 1;
+}
+message S_TRAIN_SWEEP_REWARD{
+	required RewardMsg rewards = 1;
+}
+message S_RACE_SWEEP_REWARD{
+	required RewardMsg rewards = 1;
+	required int32 raceNum = 2;
+}
+message MineBattleLog{
+	required string guid = 1;
+	required string name = 2;
+	required int32 type = 3;
+	required int64 time = 4;
+	required int32 reward = 5;
+	required int32 mine = 6;
+	required int32 hasNewLog = 7;
+}
+message S_SYN_FORMATION_INFO{
+	required PlayerFormationMsg formation = 1;
+}
+message S_HAVE_PEOPLE_JOIN_GUILD{
+	required string content = 1;
+}
+message SynHeroPropertyMsg{
+	required int32 playerHeroID = 1;
+	required int32 battleValue = 2;
+	repeated HeroPropertyInfoMsg propertyInfoMsg = 3;
+}
+message C_WEAR_STAR_LIFE{
+	required int32 playerHeroID = 1;
+	required int32 id = 2;
+	required int32 pos = 3;
+	required int32 type = 4;
+}
+message S_SYN_SOME_BODY_INTERCEPT_ESCORT{
+	required string guid = 1;
+	required int32 interceptCount = 2;
+}
+message S_ENTER_INSTANCE{
+	required int32 mapID = 1;
+	required string mapName = 2;
+	required int32 curTowerID = 3;
+	repeated SceneFighterMsg playerFighterMsg = 4;
+	repeated SceneFighterMsg monsterFighterMsg = 5;
+	repeated SceneFighterMsg heroFighterMsg = 6;
+	required int32 branch = 7;
+	repeated int32 branchs = 8;
+}
+message C_CREATE_PLAYER_SKILL{
+	required int32 roleSkillID = 1;
+}
+message S_SUBMIT_TASK{
+	repeated PlayerTaskMsg playerTask = 1;
+	required RewardMsg reward = 2;
+	required int32 submitTaskID = 3;
+	required int32 submitTaskType = 4;
+}
+message C_OPEN_WAREHOUSE_GRID{
+	required int32 openNum = 1;
+	required int32 type = 2;
+}
+message C_GET_GUILD_BATTLE_LOG{
+}
+message C_RELEASE_SKILL{
+	required int32 skillID = 1;
+}
+message S_SYN_OPEN_SERVICE_RANK_MOUNT{
+	repeated MountRankMsg ranks = 1;
+}
+message C_QUIT_ATHLETICS_SCENE{
+}
+message S_SYN_PLAYER_MC{
+	required int32 mc = 1;
+	repeated int32 amount = 2;
+}
+message C_STAR_PLAYER_PET{
+	required int32 playerPetID = 1;
+}
+message FriendGroupMsg{
+	required int32 groupID = 1;
+	required string groupName = 2;
+}
+message C_COMPOSE_HERO_EQUIP_ALL{
+	required int32 playerHeroID = 1;
+	required int32 type = 2;
+}
+message C_ENTER_CITY_SYN_CHEST{
+}
+message S_COMPOSE_WING{
+	required OwnerWingMsg ownerWing = 1;
+}
+message C_MERGE_INTENSIFY_STONE{
+	required int32 newItemID = 1;
+	required int32 num = 2;
+}
+message C_SKIP_BATTLE{
+}
+message C_GET_MOUNT_RANK{
+	required int32 page = 1;
+	required int32 type = 2;
+}
+message C_PHASE_HERO{
+	required int32 playerHeroID = 1;
+	required int32 type = 2;
+}
+message S_ENTER_INSTANCE_HALL{
+	required TeamMsg team = 1;
+	repeated TeamMsg teamList = 2;
+	repeated int32 insType = 3;
+}
+message C_ENTER_INSTANCE{
+	required int32 instanceID = 1;
+}
+message S_SYN_PLAYER_BATTLE_GUIDE{
+	required PlayerBattleGuide guide = 1;
+}
+message S_REMOVE_FRIEND_GROUP{
+	required int32 groupID = 1;
+}
+message S_GET_BOSS_STATE{
+	required int32 stateOne = 1;
+	required int32 stateTwo = 2;
+}
+message C_QUICK_FIGHT{
+	required string fighterID = 1;
+}
+message S_RECEIVE_GOLD_VIP_EXTRA_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message S_RECEIVE_FIRST_PAY{
+	required RewardMsg reward = 1;
+}
+message C_GET_EXCHANGE_LOG_LIST{
+}
+message LevelRewardMsg{
+	required int32 levelRewardID = 1;
+	required int32 times = 2;
+}
+message SkillResultMsg{
+	required string atkFighterID = 1;
+	required int32 skillID = 2;
+	required int32 leftHp = 3;
+	required int32 leftAnger = 4;
+	repeated SkillEffectMsg skillEffect = 5;
+	repeated SkillBuffMsg skillBuffMsg = 6;
+	required string targetFighterID = 7;
+	required int32 passiveSkillID = 8;
+}
+message S_PLAYER_IS_WORSHIP{
+	required int32 isWorship = 1;
+	required string guid = 2;
+}
+message S_USE_ACT_CODE{
+	required RewardMsg reward = 1;
+	required int32 result = 2;
+}
+message S_SYN_UPDATE_SHOP_LIMIT_ITEM{
+	repeated PlayerShopItemMsg shopItemMsg = 1;
+}
+message C_ACTIVE_MOUNT{
+}
+message RankActInfo{
+	required int32 type = 1;
+	required RankPlayerInfo top = 2;
+	required RankPlayerInfo self = 3;
+}
+message S_USE_BACKPACK_ITEM{
+	required int32 playerBackpackID = 1;
+	required int32 num = 2;
+}
+message C_UPGRADE_PLAYER_ROLE_SKILL{
+	required int32 playerRoleSkillID = 1;
+}
+message S_GET_PLAYER_TITLE_LIST{
+	repeated TitleInfo titles = 1;
+}
+message C_GET_GP_APP_INV_LIST_BY_PLAYER_ID{
+}
+message S_SYN_ENERGY{
+	required int32 energy = 1;
+}
+message S_OTHER_JOIN_ATHLETICS_TEAM{
+	required TeamMemberMsg memberMsg = 1;
+}
+message S_GET_PLAYER_SHOP_ITEM_DATA{
+	repeated PlayerShopItemMsg shopItemMsg1 = 1;
+	repeated PlayerShopItemMsg shopItemMsg2 = 2;
+}
+message S_REQUEST_FRIEND{
+	required int32 status = 1;
+	repeated int32 ids = 2;
+}
+message S_SYN_UPD_BATTLE_GUIDE_COMMON{
+	repeated CommonBattleGuide commons = 1;
+}
+message S_GET_CROSS_ARENA_NPC{
+	repeated SceneFighterMsg playerFighterMsg = 1;
+}
+message C_COLLECT_GOODS_TASK{
+	required int32 goods = 1;
+}
+message S_PVP_BATTLE_OVER{
+	required int32 getHonor = 1;
+	required int32 getPoints = 2;
+	required int32 getMoney = 3;
+	required int32 rank = 4;
+	required int32 result = 5;
+	required string winFighterID = 6;
+}
+message C_RECEIVE_DAILY_TASK_REWARD{
+	required int32 rewardID = 1;
+}
+message ThanksActivityMsg{
+	required int32 activityId = 1;
+	required int32 progress = 2;
+	required int32 receive = 3;
+}
+message S_SYN_PLAYER_HONOR{
+	required int32 honor = 1;
+	required int32 amount = 2;
+}
+message GuildSkill{
+	required int32 type = 1;
+	required int32 level = 2;
+}
+message S_SYN_UPDATE_GUILD_WEALTH{
+	required int64 guildWealth = 1;
+	required int64 wealth = 2;
+}
+message S_SYN_START_GUILD_BATTLE{
+}
+message BattleGuideInfo{
+	required int32 type = 1;
+	required int32 value = 2;
+}
+message S_RELEASE_SKILL{
+	repeated SkillResultMsg skillResultMsg = 1;
+	required CalRoundMsg calRoundMsg = 2;
+	required string attackID = 3;
+}
+message C_GET_PLAYER_RANK{
+	required int32 page = 1;
+	required int32 type = 2;
+}
+message C_REFRESH_GODDESS{
+}
+message S_QQ_GET_YELLOW_INFO{
+	required PlayerYellowMsg yellowMsg = 1;
+}
+message SimpleAthleTeamMsg{
+	required int32 teamID = 1;
+	required string leaderName = 2;
+	repeated SimpleTeamMemberMsg memberMsg = 3;
+	required int32 status = 4;
+}
+message S_GET_TOTAL_BATTLE_VALUE_RANK{
+	repeated TotalBattleValueRankMsg rankList = 1;
+	required int32 rankNum = 2;
+	required int32 playerRank = 3;
+	required int32 battleValue = 4;
+}
+message S_SYN_SOME_BODY_OCCUPY_MINE{
+	required PlayerMineMsg mine = 1;
+}
+message S_RECOMMEND_FRIENDS{
+	repeated PlayerSimpleMsg info = 1;
+}
+message S_PLAY_DIAL{
+	required int32 score = 1;
+	repeated RewardMsg reward = 2;
+	repeated PlayerBackpackMsg playerBackpack = 3;
+	required int32 pool = 4;
+	repeated PlayerDialLogMsg logs = 5;
+	required int32 position = 6;
+	required int32 status = 7;
+}
+message S_OPEN_LEVEL_REWARD_PANEL{
+	repeated LevelRewardMsg levelRewardMsg = 1;
+	repeated GrowthGiftMsg growthGiftMsg = 2;
+}
+message PlayerPetMsg{
+	required int32 playerPetID = 1;
+	required int32 playerID = 2;
+	required int32 basePetID = 3;
+	required int32 curPhase = 4;
+	required int32 curStar = 5;
+	required int32 fightState = 6;
+	repeated PlayerPetTrainMsg playerPetTrainMsg = 7;
+	required SynPetPropertyMsg propertyMsg = 8;
+}
+message BattleFighterMsg{
+	required string fighterID = 1;
+	required string name = 2;
+	required int32 style = 3;
+	required int32 hp = 4;
+	required int32 maxHp = 5;
+	required int32 posIndex = 6;
+	required int32 opt = 7;
+	required int32 anger = 8;
+	required int32 atkModel = 9;
+	required int32 fighterType = 10;
+	required int32 level = 11;
+	required PlayerMountMsg playerMountMsg = 12;
+	required int32 phase = 13;
+	required int32 star = 14;
+	required int32 petHatchID = 15;
+	required int32 wingHatchID = 16;
+	required int32 maxAnger = 17;
+	required int32 skillID = 18;
+	required int32 skillLevel = 19;
+}
+message S_SYN_INSPIRE_GUILD_BATTLE{
+	required int32 type = 1;
+	required int32 level = 2;
+}
+message S_SYN_INSPIRE_ATHLETICS_BATTLE{
+	required int32 type = 1;
+	required int32 value = 2;
+}
+message S_GET_PLAYER_MYSTICAL_SHOP_LIST{
+	repeated PlayerMysticalShopMsg shopMsg = 1;
+}
+message S_INTENSIFY_EQUIPMENT{
+	required int32 playerEquipmentID = 1;
+	required int32 intensifyNum = 2;
+	repeated PlayerBackpackMsg playerBackpackList = 3;
+	required int32 state = 4;
+}
+message S_SHOW_CROSS_PLAYER_INFO{
+	required SynPlayerPropertyMsg playerProperty = 1;
+	repeated PlayerEquipmentMsg playerEquipmentList = 2;
+	required PlayerMountMsg playerMountMsg = 3;
+	repeated PlayerHeroMsg playerHeroMsg = 4;
+	repeated PlayerHeroSkillMsg playerHeroSkillList = 5;
+	repeated PlayerHeroEquipMsg playerHeroEquipList = 6;
+	required int32 showType = 7;
+	required int32 playerID = 8;
+	required string playerGuid = 9;
+	required string name = 10;
+	required int32 career = 11;
+	required int32 level = 12;
+	required int32 vipLevel = 13;
+	required int32 wingID = 14;
+	required int32 phase = 15;
+	required int32 star = 16;
+	required int32 wingHatchID = 17;
+	required int32 petHatchID = 18;
+	required int32 worship = 19;
+}
+message S_FINISH_ONE_DAILY_TASK{
+	required int32 taskID = 1;
+}
+message C_TRAIN_SWEEP_REWARD{
+}
+message S_STRONG_HATCH{
+	required int32 hatchType = 1;
+	required int32 curHatchID = 2;
+	required int32 playerHeroID = 3;
+	required int32 type = 4;
+	required int32 result = 5;
+}
+message C_GET_INBOX_PAGE_LIST{
+	required int32 start = 1;
+	required int32 offset = 2;
+}
+message S_GET_ONLINE_LOG_LIST{
+	repeated PlayerOnlineRewardMsg onlineRewardMsg = 1;
+}
+message GuildBattleGuildMsg{
+	required string guid = 1;
+	required string guildName = 2;
+	required string chairman = 3;
+	required string chairmanName = 4;
+	required int32 level = 5;
+	required int32 count = 6;
+	required int32 battleValue = 7;
+	required int32 serverNo = 8;
+	required int32 rank = 9;
+	required int32 winner = 10;
+}
+message S_REFRESH_GODDESS{
+	required int32 level = 1;
+	required int32 refreshCount = 2;
+}
+message S_OPEN_HOLE{
+	repeated PlayerBackpackMsg backPackList = 1;
+	required int32 holeNum = 2;
+	required int32 playerEquipmentID = 3;
+}
+message S_SYN_PATH_BATTLE{
+	required string fighterID = 1;
+	required string path = 2;
+	required int32 moveType = 3;
+}
+message C_INSPIRE_GUILD_BATTLE{
+	required int32 type = 1;
+}
+message S_GET_ELEMENT_DATA{
+	required int32 instanceTpye = 1;
+	required int32 levelTpye = 2;
+	required int32 elementTime = 3;
+	required int32 buyElement = 4;
+}
+message S_SYN_MULTI_INS_SOME_BODY_START_BATTLE{
+	required string attackID = 1;
+	required string defenceID = 2;
+}
+message C_GUILD_DONATE{
+	required int32 value = 1;
+	required int32 type = 2;
+}
+message S_SHOW_PLAYER{
+	required SynPlayerPropertyMsg playerProperty = 1;
+	repeated PlayerEquipmentMsg playerEquipmentList = 2;
+	required PlayerMountMsg playerMountMsg = 3;
+	repeated PlayerHeroMsg playerHeroMsg = 4;
+	repeated PlayerHeroSkillMsg playerHeroSkillList = 5;
+	repeated PlayerHeroEquipMsg playerHeroEquipList = 6;
+	required int32 showType = 7;
+	required int32 playerID = 8;
+	required string playerGuid = 9;
+	required string name = 10;
+	required int32 career = 11;
+	required int32 level = 12;
+	required int32 vipLevel = 13;
+	required int32 startWingID = 14;
+	required int32 phase = 15;
+	required int32 star = 16;
+	required int32 wingHatchID = 17;
+	required int32 petHatchID = 18;
+	required int32 worship = 19;
+	repeated StarLifeInfoMsg starLifeList = 20;
+	required PlayerWingMsg playerWingMsg = 21;
+}
+message S_RECEIVE_DAILY_RECHARGE_REWARD{
+	required int32 rewardID = 1;
+	required RewardMsg reward = 2;
+}
+message PlayerInstanceLogMsg{
+	required int32 instanceID = 1;
+	required int32 chapterID = 2;
+	required int32 mode = 3;
+	required int32 type = 4;
+	required int32 valuation = 5;
+	required int32 enterCount = 6;
+	required int32 maxEnterCount = 7;
+	required int32 buyCount = 8;
+}
+message FriendMsg{
+	required int32 friendID = 1;
+	required PlayerSimpleMsg info = 2;
+	required int32 type = 3;
+	required bool status = 4;
+	required int32 sendGift = 5;
+	required int32 receiveGift = 6;
+	required int32 group = 7;
+	required int64 lastConcatTime = 8;
+	required string personalSign = 9;
+	required int32 chatStatus = 10;
+}
+message PlayerHeroMsg{
+	required int32 playerHeroID = 1;
+	required int32 playerID = 2;
+	required int32 heroID = 3;
+	required int32 level = 4;
+	required int32 heroExp = 5;
+	required int32 phase = 6;
+	required int32 star = 7;
+	required int32 position = 8;
+	required int32 abilityLevel = 9;
+	required int32 ability = 10;
+	required int32 heroState = 11;
+	required SynHeroPropertyMsg propertyMsg = 12;
+	required int32 followFlag = 13;
+	required int32 wingHatchID = 14;
+	required int32 petHatchID = 15;
+	required int32 fightFlag = 16;
+}
+message C_XUNBAO_LOTTERY{
+	required int32 type = 1;
+}
+message LotteryRewardMsg{
+	required int32 itemID = 1;
+	required int32 itemNum = 2;
+	required int32 itemType = 3;
+	required int32 heroID = 4;
+	required bool newHero = 5;
+}
+message C_MOUNT_EQUIP_COMPOSE{
+	required int32 mountID = 1;
+	required int32 pos = 2;
+}
+message C_UP_TASK_STAR{
+	required int32 taskID = 1;
+}
+message S_REFUSE_ALL_APPLY{
+	required int32 resultType = 1;
+}
+message S_RIDE_MOUNT{
+	required int32 rideMountID = 1;
+}
+message S_SYN_SOME_BODY_CHANGE_TITLE{
+	required string fighterID = 1;
+	required int32 titleID = 2;
+}
+message S_SYN_REFUSE_ATHLETICS_TEAM{
+	required string playerName = 1;
+}
+message C_INVITE_ATHLETICS_TEAM{
+	required string inviteName = 1;
+}
+message PlayerRoleSkillMsg{
+	required int32 playerRoleSkillID = 1;
+	required int32 playerID = 2;
+	required int32 roleSkillID = 3;
+	required int32 roleBaseSkillID = 4;
+	required int32 level = 5;
+	required int32 position = 6;
+}
+message C_QQ_GET_YELLOW_INFO{
+}
+message S_SYN_PLAYER_MONEY{
+	required int32 money = 1;
+	repeated int32 amount = 2;
+}
+message C_INLAY_JEWEL{
+	required int32 playerEquipmentID = 1;
+	required int32 playerBackpackID = 2;
+	required int32 holeIndex = 3;
+}
+message FightStatus{
+	required int32 heroID = 1;
+	required int32 hp = 2;
+	required int32 anger = 3;
+	required int32 status = 4;
+}
+message C_GET_GUIDE_LIST_BYPAGE{
+	required int32 page = 1;
+	required int32 para = 2;
+}
+message C_PLAY_DIAL{
+	required int32 count = 1;
+}
+message S_SUBMIT_QUESTIONNAIRE{
+	required int32 questionProgress = 1;
+}
+message S_SYN_SINGLE_REWARD{
+	repeated RewardMsg rewards = 1;
+}
